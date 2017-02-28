@@ -1,0 +1,24 @@
+{
+  "name": "tdapi",
+  "version": "0.8.0",
+  "description": "Work in-progress NodeJS API wrapper for TeamDynamix",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LivVitale/tdapi.git"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "jsonwebtoken": "^7.1.9",
+    "jwt-decode": "^2.1.0",
+    "request": "^2.76.0",
+    "request-promise": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-docs": "jsdoc -c ./jsdoc.conf.json"
+  },
+  "author": "Liv Vitale",
+  "license": "ISC",
+  "private": false
+}

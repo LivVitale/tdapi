@@ -1,0 +1,28 @@
+<pre><code class="language-js line-numbers">var TDAPI = require('tdapi');
+
+// TDAPI clients can either be initialized using a BEID + WSK pair or a UserName + Password.
+// Note: Some API calls can only be made with a BEID + WSK pair, while others can be made using a UserName + password but require the User to have certain permissions. Consult the TeamDynamix API documentation for full details.
+
+// Initialize a new TDAPI client
+var TD = new TDAPI({
+  baseUrl: 'https://api.teamdynamix.com/TDWebApi/api',
+  credentials: {
+    BEID:           'xxxxxx',
+    WebServicesKey: 'xxxxxx'
+  }
+  // OR
+  credentials: {
+    UserName: 'test',
+    Password: 'xxxxxx'
+  }
+});
+
+// The TDAPI client can now be used to make API calls.
+TD.getGroups()
+  .then(groups => {
+    console.log(groups);
+  })
+  .catch(err => {
+    console.error(err);
+  });
+</pre></code>

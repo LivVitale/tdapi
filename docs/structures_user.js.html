@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>structures/user.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/prism.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/prism.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Account.html">Account</a><ul class='methods'><li data-type='method'><a href="Account.html#edit">edit</a></li></ul></li><li><a href="Asset.html">Asset</a><ul class='methods'><li data-type='method'><a href="Asset.html#addFeedEntry">addFeedEntry</a></li><li data-type='method'><a href="Asset.html#addResource">addResource</a></li><li data-type='method'><a href="Asset.html#addToTicket">addToTicket</a></li><li data-type='method'><a href="Asset.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Asset.html#getResources">getResources</a></li><li data-type='method'><a href="Asset.html#removeFromTicket">removeFromTicket</a></li><li data-type='method'><a href="Asset.html#removeResource">removeResource</a></li><li data-type='method'><a href="Asset.html#update">update</a></li></ul></li><li><a href="Location.html">Location</a><ul class='methods'><li data-type='method'><a href="Location.html#createRoom">createRoom</a></li><li data-type='method'><a href="Location.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="Location.html#edit">edit</a></li><li data-type='method'><a href="Location.html#editRoom">editRoom</a></li></ul></li><li><a href="TDAPI.html">TDAPI</a><ul class='methods'><li data-type='method'><a href="TDAPI.html#addAssetFeedEntry">addAssetFeedEntry</a></li><li data-type='method'><a href="TDAPI.html#addAssetResource">addAssetResource</a></li><li data-type='method'><a href="TDAPI.html#addAssetToTicket">addAssetToTicket</a></li><li data-type='method'><a href="TDAPI.html#createAccount">createAccount</a></li><li data-type='method'><a href="TDAPI.html#createAsset">createAsset</a></li><li data-type='method'><a href="TDAPI.html#createLocation">createLocation</a></li><li data-type='method'><a href="TDAPI.html#createRoom">createRoom</a></li><li data-type='method'><a href="TDAPI.html#createUser">createUser</a></li><li data-type='method'><a href="TDAPI.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="TDAPI.html#editAccount">editAccount</a></li><li data-type='method'><a href="TDAPI.html#editAsset">editAsset</a></li><li data-type='method'><a href="TDAPI.html#editLocation">editLocation</a></li><li data-type='method'><a href="TDAPI.html#editRoom">editRoom</a></li><li data-type='method'><a href="TDAPI.html#getAccounts">getAccounts</a></li><li data-type='method'><a href="TDAPI.html#getAsset">getAsset</a></li><li data-type='method'><a href="TDAPI.html#getAssetFeedEntries">getAssetFeedEntries</a></li><li data-type='method'><a href="TDAPI.html#getAssetResources">getAssetResources</a></li><li data-type='method'><a href="TDAPI.html#getAssets">getAssets</a></li><li data-type='method'><a href="TDAPI.html#getAssetStatuses">getAssetStatuses</a></li><li data-type='method'><a href="TDAPI.html#getCustomAttributes">getCustomAttributes</a></li><li data-type='method'><a href="TDAPI.html#getGroupMembers">getGroupMembers</a></li><li data-type='method'><a href="TDAPI.html#getGroups">getGroups</a></li><li data-type='method'><a href="TDAPI.html#getLocation">getLocation</a></li><li data-type='method'><a href="TDAPI.html#getLocations">getLocations</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRole">getSecurityRole</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRoles">getSecurityRoles</a></li><li data-type='method'><a href="TDAPI.html#getTicket">getTicket</a></li><li data-type='method'><a href="TDAPI.html#getTickets">getTickets</a></li><li data-type='method'><a href="TDAPI.html#getTicketStatuses">getTicketStatuses</a></li><li data-type='method'><a href="TDAPI.html#getTicketTypes">getTicketTypes</a></li><li data-type='method'><a href="TDAPI.html#getUser">getUser</a></li><li data-type='method'><a href="TDAPI.html#getUsers">getUsers</a></li><li data-type='method'><a href="TDAPI.html#importAssets">importAssets</a></li><li data-type='method'><a href="TDAPI.html#importPeople">importPeople</a></li><li data-type='method'><a href="TDAPI.html#login">login</a></li><li data-type='method'><a href="TDAPI.html#patchTicket">patchTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetFromTicket">removeAssetFromTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetResource">removeAssetResource</a></li><li data-type='method'><a href="TDAPI.html#searchAccounts">searchAccounts</a></li><li data-type='method'><a href="TDAPI.html#updateTicket">updateTicket</a></li></ul></li><li><a href="Ticket.html">Ticket</a><ul class='methods'><li data-type='method'><a href="Ticket.html#addAsset">addAsset</a></li><li data-type='method'><a href="Ticket.html#addContact">addContact</a></li><li data-type='method'><a href="Ticket.html#edit">edit</a></li><li data-type='method'><a href="Ticket.html#getContacts">getContacts</a></li><li data-type='method'><a href="Ticket.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Ticket.html#patch">patch</a></li><li data-type='method'><a href="Ticket.html#removeAsset">removeAsset</a></li><li data-type='method'><a href="Ticket.html#removeContact">removeContact</a></li><li data-type='method'><a href="Ticket.html#update">update</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#addGroup">addGroup</a></li><li data-type='method'><a href="User.html#deleteFunctionalRole">deleteFunctionalRole</a></li><li data-type='method'><a href="User.html#getFunctionalRoles">getFunctionalRoles</a></li><li data-type='method'><a href="User.html#getGroups">getGroups</a></li><li data-type='method'><a href="User.html#getTickets">getTickets</a></li><li data-type='method'><a href="User.html#removeGroup">removeGroup</a></li><li data-type='method'><a href="User.html#setActive">setActive</a></li><li data-type='method'><a href="User.html#update">update</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-gettingstarted.html">Getting Started</a></li><li><a href="tutorial-usermanagement.html">User Management</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">structures/user.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var request = require('request-promise');
+var Ticket = require('./ticket');
+
+/**
+ * User class
+ * @constructor
+ * @param    {TDAPI}    client                   - The TDAPI client the User belongs to.
+ * @param    {Object}   properties               - The properties to be initialized on the User object (see: Properties).
+ * 
+ * @property {Number}   UID                      - The ID of the user.
+ * @property {GUID}     BEID                     - The BEID of the user.
+ * @property {GUID}     BEIDInt                  - The integer-based BEID of the user.
+ * @property {Boolean}  IsActive                 - A value indicating whether the user is active.
+ * @property {String}   UserName                 - The username of the user.
+ * @property {String}   FullName                 - The full name of the user.
+ * @property {String}   FirstName                - The first name of the user.
+ * @property {String}   LastName                 - The last name of the user.
+ * @property {String}   MiddleName               - The middle name of the user.
+ * @property {DateTime} Birthday                 - The user's birthday.
+ * @property {String}   Salutation               - The salutation of the user.
+ * @property {Number}   DefaultAccountID         - The nickname of the user.
+ * @property {String}   DefaultAccountName       - The ID of the default account for the user.
+ * @property {String}   PrimaryEmail             - The primary email address for the user.
+ * @property {String}   AlternateEmail           - The alternate email address for the user.
+ * @property {String}   ExternalID               - The organizational ID for the user.
+ * @property {String}   AlternateID              - The alternate ID for the user.
+ * @property {Object[]} Applications             - The system-defined (i.e. non-Platform) applications for the user.
+ * @property {String}   SecurityRoleName         - The name of the user's global security role.
+ * @property {Number}   SecurityRoleID           - The ID of the user's global security role.
+ * @property {String[]} Permissions              - The global security role permissions for the user.
+ * @property {Object[]} OrgApplications          - The organizationally-defined (i.e. Platform) applications for the user.
+ * @property {Number[]} GroupIDs                 - The IDs of the groups to which the user belongs.
+ * @property {Number}   ReferenceID              - The interger reference ID for the user.
+ * @property {String}   AlertEmail               - The alert email address for the user. System notifications will be sent to this email address.
+ * @property {String}   ProfileImageFileName     - The file name of the profile image for the user.
+ * @property {String}   Company                  - The name of the user's company.
+ * @property {String}   Title                    - The user's title.
+ * @property {String}   HomePhone                - The user's home phone number.
+ * @property {String}   PrimaryPhone             - The primary phone number for the user. This is a value such as "Work" or "Mobile".
+ * @property {String}   WorkPhone                - The user's work phone number.
+ * @property {String}   Pager                    - The user's pager number.
+ * @property {String}   OtherPhone               - The user's other phone number.
+ * @property {String}   MobilePhone              - The user's mobile phone number.
+ * @property {String}   Fax                      - The user's fax number.
+ * @property {Number}   DefaultPriorityID        - The default priority ID.
+ * @property {String}   DefaultPriorityName      - The default priority name.
+ * @property {String}   AboutMe                  - The user's "about me".
+ * @property {String}   WorkAddress              - The user's work address.
+ * @property {String}   WorkCity                 - The work city.
+ * @property {String}   WorkState                - The work state.
+ * @property {String}   WorkZip                  - The work zip.
+ * @property {String}   WorkCountry              - The work country.
+ * @property {String}   HomeAddress              - The user's home address.
+ * @property {String}   HomeCity                 - The home city.
+ * @property {String}   HomeState                - The home state.
+ * @property {String}   HomeZip                  - The home zip.
+ * @property {String}   HomeCountry              - The home country.
+ * @property {Number}   DefaultRate              - The user's default billing rate. This only applies to Users, not Customers. Customers will always have this set to 0.
+ * @property {Number}   CostRate                 - The user's cost rate. This only applies to Users, not Customers. Customers will always have this set to 0.
+ * @property {Boolean}  IsEmployee               - A value indicating whether or not this user is an employee. This only applies to Users, not Customers. Customers will always have this set to false.
+ * @property {Number}   WorkableHours            - The number of workable hours in a work day for the user. This only applies to Users, not Customers. Customers will always have this set to 0.
+ * @property {Boolean}  IsCapacityManaged        - A value indicating whether  this user's capacity is managed, meaning they can have capacity and will appear on capacity/availability reports. This only applies to Users, not Customers. Customers will always have this set tp false.
+ * @property {DateTime} ReportTimeAfterDate      - The date the user should start reporting time on after. This also governs capacity calaculation. This only applies to Users, not Customers. Customer will always have this set to an empty date.
+ * @property {DateTime} EndDate                  - The date the user is no longer available for scheduling and no longer required to log time after. This only applies to Users, not Customers. Customers will always have this set to an empty date.
+ * @property {Boolean}  ShouldReportTime         - A value indicating whether the user should report time. This only applies to Users, not Customers. Customers will always have this set to false.
+ * @property {String}   ReportsToUID             - The unique identifier of the user this user reports to.
+ * @property {String}   ReportsToFullName        - The full name of the user this user reports to.
+ * @property {Number}   ResourcePoolID           - The ID of the resource pool this user belongs to. This only applies to Users, not Customers. Customers will always have this set to -1.
+ * @property {String}   ResourcePoolName         - The name of the resource pool.
+ * @property {Number}   TZID                     - ID of the time zone the user is in.
+ * @property {String}   TZName                   - The name of the time zone the user is in.
+ * @property {'1'|'2'}  TypeID                   - The type of the user (1 for User, 2 for Customer).
+ * @property {String}   AuthenticationUserName   - The authentication username of the user. This username is what will be used when authentication rather than the standard username field. This field only applied to non-TeamDynamix authentication types. This value should be unique across all username and authentication usernames in your organization. If the provided value is not unique, it will be ignored. This only applies to Users, not Customers. Customers will always have this set to an empty string.
+ * @property {Number}   AuthenticationProviderID - The authentication provider the user will use to authenticate by its ID. Leave this value blank to specify TeamDynamix or when using SSO authentication. This value can be obtained from the ADmin application Authentication section by one of your organization's administrators who has access to modify authentication settings. If an invalid value is provided, this will use the default authentication provider for the organization. This only applies to Users, not Customers. Customers will always have this set to 0.
+ * @property {Object[]} Attributes               - The custom person attributes.
+ * @property {Number}   Gender                   - The user's gender.
+ * @property {String}   IMProvider               - the instant messenger provider for the user.
+ * @property {String}   IMHandle                 - The instant messenger username (or "handle") for the user.
+ */
+function User(client, properties) {
+  this.client = client;
+  Object.defineProperty(this, 'client', { enumerable: false, configurable: false });
+
+  if(properties) this.init(properties);
+}
+
+User.prototype.init = function(properties) {
+  for(var property in properties) {
+    if(validUserAttributes.indexOf(property) > -1) {
+      this[property] = properties[property];
+    }
+  }
+};
+
+/**
+ * Updates the User
+ * @returns {Promise&lt;User>} user
+ */
+User.prototype.update = function() {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.client.baseUrl}/people/${this.UID}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: this
+      });
+    })
+    .then(user => new User(this.client, user))
+    .catch(handleError);
+};
+
+/**
+ * Gets the User's functional roles
+ * @returns {Promise&lt;Object[]>} functionalRoles
+ */
+User.prototype.getFunctionalRoles = function() {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.client.baseUrl}/people/${this.UID}/functionalroles`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Deletes a functional role from the User account
+ * @param {any} roleId
+ * @returns {Promise&lt;Object>} message
+ */
+User.prototype.deleteFunctionalRole = function(roleId) {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'DELETE',
+        url: `${this.client.baseUrl}/people/${this.UID}/functionalroles/${roleId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets the User's groups
+ * @returns {Promise&lt;Object>} groups
+ */
+User.prototype.getGroups = function() {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.client.baseUrl}/people/${this.UID}/groups`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Adds a group to the User account
+ * @param {Boolean} groupId
+ * @param {Boolean} [isPrimary=false]
+ * @param {Boolean} [isNotified=false]
+ * @param {Boolean} [isManager=false]
+ * @returns {Promise&lt;Object>} message
+ */
+User.prototype.addGroup = function(groupId, isPrimary, isNotified, isManager) {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.client.baseUrl}/people/${this.UID}/groups/${groupId}` + 
+              `?isPrimary=${isPrimary || false}` +
+              `?isNotified=${isNotified || false}` +
+              `?isManager=${isManager || false}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Removes a group from the User account
+ * @param {any} groupId
+ * @returns {Promise&lt;Object>} message
+ */
+User.prototype.removeGroup = function(groupId) {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'DELETE',
+        url: `${this.client.baseUrl}/people/${this.UID}/groups/${groupId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Sets the User's active status
+ * @param {Boolean} status
+ * @returns {Promise&lt;Object>} message
+ */
+User.prototype.setActive = function(status) {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.client.baseUrl}/people/${this.UID}/isactive?status=${status}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets Tickets requested by the User
+ * @param {any} appId
+ * @param {any} searchParams
+ * @returns {Promise&lt;Ticket[]>}
+ */
+User.prototype.getTickets = function(appId, searchParams) {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.client.baseUrl}/${appId}/tickets/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: Object.assign({ RequestorUids: [this.UID] }, searchParams || {})
+      });
+    })
+    .then(tickets => {
+      if(Array.isArray(tickets)) {
+        return tickets.map(ticket => new Ticket(this.client, ticket));
+      }
+    })
+    .catch(handleError);
+};
+
+// Generic error handling - TODO: Improve error detail
+function handleError(err) {
+  return Promise.reject(err);
+}
+
+validUserAttributes = [
+  "UID",
+  "BEID",
+  "BEIDInt",
+  "IsActive",
+  "UserName",
+  "FullName",
+  "FirstName",
+  "LastName",
+  "MiddleName",
+  "Birthday",
+  "Salutation",
+  "Nickname",
+  "DefaultAccountID",
+  "DefaultAccountName",
+  "PrimaryEmail",
+  "AlternateEmail",
+  "ExternalID",
+  "AlternateID",
+  "Applications",
+  "SecurityRoleName",
+  "SecurityRoleID",
+  "Permissions",
+  "OrgApplications",
+  "GroupIDs",
+  "ReferenceID",
+  "AlertEmail",
+  "ProfileImageFileName",
+  "Company",
+  "Title",
+  "HomePhone",
+  "PrimaryPhone",
+  "WorkPhone",
+  "Pager",
+  "OtherPhone",
+  "MobilePhone",
+  "Fax",
+  "DefaultPriorityID",
+  "DefaultPriorityName",
+  "AboutMe",
+  "WorkAddress",
+  "WorkCity",
+  "WorkState",
+  "WorkZip",
+  "WorkCountry",
+  "HomeAddress",
+  "HomeCity",
+  "HomeState",
+  "HomeZip",
+  "HomeCountry",
+  "DefaultRate",
+  "CostRate",
+  "IsEmployee",
+  "WorkableHours",
+  "IsCapacityManaged",
+  "ReportTimeAfterDate",
+  "EndDate",
+  "ShouldReportTime",
+  "ReportsToUID",
+  "ReportsToFullName",
+  "ResourcePoolID",
+  "ResourcePoolName",
+  "TZID",
+  "TZName",
+  "TypeID",
+  "AuthenticationUserName",
+  "AuthenticationProviderID",
+  "Attributes",
+  "Gender",
+  "IMProvider",
+  "IMHandle",
+  "IsPrimaryGroup",
+  "IsGroupManager",
+  "IsGroupNotified",
+  "AddedToGroupDate"
+];
+
+module.exports = User;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Dec 21 2016 11:45:33 GMT-0800 (Pacific Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

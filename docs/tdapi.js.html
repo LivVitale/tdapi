@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>tdapi.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/prism.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/prism.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Account.html">Account</a><ul class='methods'><li data-type='method'><a href="Account.html#edit">edit</a></li></ul></li><li><a href="Asset.html">Asset</a><ul class='methods'><li data-type='method'><a href="Asset.html#addFeedEntry">addFeedEntry</a></li><li data-type='method'><a href="Asset.html#addResource">addResource</a></li><li data-type='method'><a href="Asset.html#addToTicket">addToTicket</a></li><li data-type='method'><a href="Asset.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Asset.html#getResources">getResources</a></li><li data-type='method'><a href="Asset.html#removeFromTicket">removeFromTicket</a></li><li data-type='method'><a href="Asset.html#removeResource">removeResource</a></li><li data-type='method'><a href="Asset.html#update">update</a></li></ul></li><li><a href="Location.html">Location</a><ul class='methods'><li data-type='method'><a href="Location.html#createRoom">createRoom</a></li><li data-type='method'><a href="Location.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="Location.html#edit">edit</a></li><li data-type='method'><a href="Location.html#editRoom">editRoom</a></li></ul></li><li><a href="TDAPI.html">TDAPI</a><ul class='methods'><li data-type='method'><a href="TDAPI.html#addAssetFeedEntry">addAssetFeedEntry</a></li><li data-type='method'><a href="TDAPI.html#addAssetResource">addAssetResource</a></li><li data-type='method'><a href="TDAPI.html#addAssetToTicket">addAssetToTicket</a></li><li data-type='method'><a href="TDAPI.html#createAccount">createAccount</a></li><li data-type='method'><a href="TDAPI.html#createAsset">createAsset</a></li><li data-type='method'><a href="TDAPI.html#createLocation">createLocation</a></li><li data-type='method'><a href="TDAPI.html#createRoom">createRoom</a></li><li data-type='method'><a href="TDAPI.html#createUser">createUser</a></li><li data-type='method'><a href="TDAPI.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="TDAPI.html#editAccount">editAccount</a></li><li data-type='method'><a href="TDAPI.html#editAsset">editAsset</a></li><li data-type='method'><a href="TDAPI.html#editLocation">editLocation</a></li><li data-type='method'><a href="TDAPI.html#editRoom">editRoom</a></li><li data-type='method'><a href="TDAPI.html#getAccounts">getAccounts</a></li><li data-type='method'><a href="TDAPI.html#getAsset">getAsset</a></li><li data-type='method'><a href="TDAPI.html#getAssetFeedEntries">getAssetFeedEntries</a></li><li data-type='method'><a href="TDAPI.html#getAssetResources">getAssetResources</a></li><li data-type='method'><a href="TDAPI.html#getAssets">getAssets</a></li><li data-type='method'><a href="TDAPI.html#getAssetStatuses">getAssetStatuses</a></li><li data-type='method'><a href="TDAPI.html#getCustomAttributes">getCustomAttributes</a></li><li data-type='method'><a href="TDAPI.html#getGroupMembers">getGroupMembers</a></li><li data-type='method'><a href="TDAPI.html#getGroups">getGroups</a></li><li data-type='method'><a href="TDAPI.html#getLocation">getLocation</a></li><li data-type='method'><a href="TDAPI.html#getLocations">getLocations</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRole">getSecurityRole</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRoles">getSecurityRoles</a></li><li data-type='method'><a href="TDAPI.html#getTicket">getTicket</a></li><li data-type='method'><a href="TDAPI.html#getTickets">getTickets</a></li><li data-type='method'><a href="TDAPI.html#getTicketStatuses">getTicketStatuses</a></li><li data-type='method'><a href="TDAPI.html#getTicketTypes">getTicketTypes</a></li><li data-type='method'><a href="TDAPI.html#getUser">getUser</a></li><li data-type='method'><a href="TDAPI.html#getUsers">getUsers</a></li><li data-type='method'><a href="TDAPI.html#importAssets">importAssets</a></li><li data-type='method'><a href="TDAPI.html#importPeople">importPeople</a></li><li data-type='method'><a href="TDAPI.html#login">login</a></li><li data-type='method'><a href="TDAPI.html#patchTicket">patchTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetFromTicket">removeAssetFromTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetResource">removeAssetResource</a></li><li data-type='method'><a href="TDAPI.html#searchAccounts">searchAccounts</a></li><li data-type='method'><a href="TDAPI.html#updateTicket">updateTicket</a></li></ul></li><li><a href="Ticket.html">Ticket</a><ul class='methods'><li data-type='method'><a href="Ticket.html#addAsset">addAsset</a></li><li data-type='method'><a href="Ticket.html#addContact">addContact</a></li><li data-type='method'><a href="Ticket.html#edit">edit</a></li><li data-type='method'><a href="Ticket.html#getContacts">getContacts</a></li><li data-type='method'><a href="Ticket.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Ticket.html#patch">patch</a></li><li data-type='method'><a href="Ticket.html#removeAsset">removeAsset</a></li><li data-type='method'><a href="Ticket.html#removeContact">removeContact</a></li><li data-type='method'><a href="Ticket.html#update">update</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#addGroup">addGroup</a></li><li data-type='method'><a href="User.html#deleteFunctionalRole">deleteFunctionalRole</a></li><li data-type='method'><a href="User.html#getFunctionalRoles">getFunctionalRoles</a></li><li data-type='method'><a href="User.html#getGroups">getGroups</a></li><li data-type='method'><a href="User.html#getTickets">getTickets</a></li><li data-type='method'><a href="User.html#removeGroup">removeGroup</a></li><li data-type='method'><a href="User.html#setActive">setActive</a></li><li data-type='method'><a href="User.html#update">update</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-gettingstarted.html">Getting Started</a></li><li><a href="tutorial-usermanagement.html">User Management</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">tdapi.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+
+var fs = require('fs');
+var path = require('path');
+var request = require('request-promise');
+var jwtDecode = require('jwt-decode');
+
+var User = require('./structures/user');
+var Ticket = require('./structures/ticket');
+var Account = require('./structures/account');
+var Location = require('./structures/location');
+var Asset = require('./structures/asset');
+
+
+/**
+ * Base TeamDynamix API class
+ * @class
+ * @constructor
+ * @param {TDAPIOptions} options - The options to configure the TDAPI client with.
+ */
+function TDAPI(options) {
+    this.credentials = options.credentials || { UserName: '', Password: ''};
+    this.baseUrl = options.baseUrl || 'https://api.teamdynamix.com/TDWebAPI/api';
+    this.bearerToken = '';
+}
+
+/**
+ * 
+ * @typedef  {Object} TDAPIOptions
+ * @property {String}            baseUrl     - The base URL of your TeamDynamix API (i.e. https://api.teamdynamix.com/TDWebAPI/api)
+ * @property {APIUser|AdminUser} credentials - The API User or Admin User to authenticate as.
+ */
+
+/**
+ * @typedef {Object} APIUser
+ * @property {String} UserName - The username to authenticate as.
+ * @property {String} Password - The user's password.
+ */
+
+/**
+ * @typedef {Object} AdminUser
+ * @property {String} BEID            - The BEID.
+ * @property {String} WebServicesKey  - The web services key. 
+ */
+
+/**
+ * Gets a Bearer Token for authenticating other requests.
+ * @returns {Promise&lt;String>}
+ */
+TDAPI.prototype.login = function() {
+  return new Promise((resolve, reject) => {
+    if(this.bearerToken &amp;&amp; !tokenExpired(this.bearerToken)) {
+      resolve(this.bearerToken);
+    } else {
+      var options = {
+        method: 'POST',
+        url: `${this.baseUrl}/auth` + ('BEID' in this.credentials ? '/loginadmin' : '/login'),
+        form: this.credentials
+      };
+
+      request(options)
+        .then(bearerToken => {
+          resolve(bearerToken);
+        })
+        .catch(err => {
+          reject(err);
+        });
+    }
+  });
+};
+
+/**
+ * Gets a user object.
+ * @param {Guid} uid  - The UID of the user.
+ * @returns {Promise&lt;User>}
+ */
+TDAPI.prototype.getUser = function(uid) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/people/${uid}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .then(user => new User(this, user))
+    .catch(handleError);
+};
+
+/**
+ * Gets all user objects matching specified search parameters.
+ * @param {UserSearch} searchParams  - The search parameters to use.
+ * @returns {Promise&lt;User[]>}
+ */
+TDAPI.prototype.getUsers = function(searchParams) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/people/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: searchParams || {}
+      });
+    })
+    .then(users => {
+      if(Array.isArray(users)) {
+        return users.map(user => new User(this, user));
+      } else {
+        return users;
+      }
+    })
+    .catch(handleError);
+};
+
+/**
+ * Creates a user object with specified attributes.
+ * @param {User} user  - The user to create.
+ * @returns {Promise&lt;User>}
+ */
+TDAPI.prototype.createUser = function(user) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/people`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: user
+      });
+    })
+    .then(user => new User(this, user))
+    .catch(handleError);
+};
+
+/**
+ * Gets a Security Role.
+ * @param {Guid} roleId  - The ID of the security role.
+ * @returns {Promise&lt;SecurityRole>} securityRole
+ */
+TDAPI.prototype.getSecurityRole = function(roleId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/securityroles/${roleId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets Security Roles.
+ * @param {SecurityRoleSearch} searchParams  - The search parameters to use.
+ * @returns {Promise&lt;SecurityRole[]>} securityRoles
+ */
+TDAPI.prototype.getSecurityRoles = function(searchParams) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/securityroles/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: searchParams || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets Groups.
+ * @param {GroupSearch} [searchParams={}]  - The search parameters to use.
+ * @returns {Promise&lt;Group[]>} groups
+ */
+TDAPI.prototype.getGroups = function(searchParams) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/groups/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: searchParams || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets group members for a specified group.
+ * @param {Number} groupId  - The ID of the group.
+ * @returns {Promise&lt;User[]>} groupMembers
+ */
+TDAPI.prototype.getGroupMembers = function(groupId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/groups/${groupId}/members`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .then(users => {
+      if(Array.isArray(users)) {
+        return users.map(user => new User(this, user));
+      } else {
+        return users;
+      }
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets a Ticket.
+ * @param {Number} appId     - The ID of the ticketing application.
+ * @param {Number} ticketId  - The ID of the ticket.
+ * @returns {Promise&lt;Ticket>} ticket
+ */
+TDAPI.prototype.getTicket = function(appId, ticketId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/${appId}/tickets/${ticketId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .then(ticket => new Ticket(this, ticket))
+    .catch(handleError);
+};
+
+/**
+ * Gets Tickets.
+ * @param {Number} appId                    - The ID of the ticketing application.
+ * @param {TicketSearch} [searchParams={}]  - The search parameters to use.
+ * @returns {Promise&lt;Ticket[]>}
+ */
+TDAPI.prototype.getTickets = function(appId, searchParams) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/${appId}/tickets/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: searchParams || {}
+      });
+    })
+    .then(tickets => {
+      if(Array.isArray(tickets)) {
+        return tickets.map(ticket => new Ticket(this, ticket));
+      } else {
+        return tickets;
+      }
+    })
+    .catch(handleError);
+};
+
+/**
+ * Edits a ticket via HTTP PATCH (Edits only specified fields)
+ * @param {Number} appId                         - The ID of the ticketing application.
+ * @param {Number} ticketId                      - The ID of the ticket to update.
+ * @param {any} patch                            - The patch document containing changes to apply to the ticket.
+ * @param {Boolean} [false] notifyNewResponsible - If true, will notify the newly-responsible resource(s) if the responsibility is changed as a result of the edit.
+ * @returns {Promise&lt;Ticket>} ticket
+ */
+TDAPI.prototype.patchTicket = function(appId, ticketId, patch, notifyNewResponsible) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PATCH',
+        url: `$this.baseUrl/${appId}/tickets/${ticketId}?notifyNewResponsible=${notifyNewResponsible || false}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: patch
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Updates a ticket / Adds a new feed entry.
+ * @param {Number} appId               - The ID of the ticketing application.
+ * @param {Number} ticketId            - The ID of the ticket to update.
+ * @param {TicketFeedEntry} feedEntry  - The new feed entry to add.
+ * @returns {Promise&lt;ItemUpdate>} itemUpdate
+ */
+TDAPI.prototype.updateTicket = function(appId, ticketId, feedEntry) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/${appId}/tickets/${ticketId}/feed`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: feedEntry
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets all active ticket types
+ * @param {Number} appId - The ID of the ticketing application.
+ * @returns {Promise&lt;TicketType[]>} types
+ */
+TDAPI.prototype.getTicketTypes = function(appId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/${appId}/tickets/types`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Get ticket statuses.
+ * @param {Number} appId  - The ID of the ticketing application.
+ * @returns {Promise&lt;TicketStatus[]>} statuses
+ */
+TDAPI.prototype.getTicketStatuses = function(appId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/${appId}/tickets/statuses`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets a list of all active accounts/departments.
+ * @returns {Promise&lt;Account[]>} accounts
+ */
+TDAPI.prototype.getAccounts = function() {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/accounts`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .then(accounts => {
+      if(Array.isArray(accounts)) {
+        return accounts.map(account => new Account(this, account));
+      } else {
+        return accounts;
+      }
+    })
+    .catch(handleError);
+};
+
+/**
+ * Creates a new account.
+ * @param {Account} account - The account to be created.
+ * @returns {Promise&lt;Account>} account
+ */
+TDAPI.prototype.createAccount = function(account) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/accounts`,
+        json: true,
+        body: account || {}
+      });
+    })
+    .then(account => new Account(this, account))
+    .catch(handleError);
+};
+
+/**
+ * Edits the account specified by the account ID.
+ * @param {Number}  id      - The account ID.
+ * @param {Account} account - The fields that the updated account should hold.
+ * @returns {Promise&lt;Object>} body
+ */
+TDAPI.prototype.editAccount = function(id, account) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        auth: { bearer: bearerToken },
+        json: true,
+        body: account || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets a list of accounts/departments
+ * @param {AccountSearch} searchParams
+ * @returns {Promise&lt;Account[]>} accounts
+ */
+TDAPI.prototype.searchAccounts = function(searchParams) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/accounts/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: searchParams || {}
+      });
+    })
+    .then(accounts => {
+      if(Array.isArray(accounts)) {
+        return accounts.map(account => new Account(this, account));
+      } else {
+        return accounts;
+      }
+    })
+    .catch(handleError);
+};
+
+/**
+ * Creates a location.
+ * @param {Location} location - The location to create.
+ * @returns {Promise&lt;Location>} location
+ */
+TDAPI.prototype.createLocation = function(location) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/locations`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: location
+      });
+    })
+    .then(location => new Location(this, location))
+    .catch(handleError);
+};
+
+/**
+ * Gets a location.
+ * @param {Number} id - The ID of the location.
+ * @returns {Promise&lt;Location>} location
+ */
+TDAPI.prototype.getLocation = function(id) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/locations/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .then(location => new Location(this, location))
+    .catch(handleError);
+};
+
+/**
+ * Edits the specified location.
+ * @param {Number} id         - The ID of the location.
+ * @param {Location} location - The location with updated values.
+ * @returns {Promise&lt;Location>} location
+ */
+TDAPI.prototype.editLocation = function(id, location) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.baseUrl}/locations/${id}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: location
+      });
+    })
+    .then(location => new Location(this, location))
+    .catch(handleError);
+};
+
+/**
+ * Creates a room in a location.
+ * @param {Number}       id   - The containing location ID.
+ * @param {LocationRoom} room - The room to create.
+ * @returns {Promise&lt;LocationRoom>} room
+ */
+TDAPI.prototype.createRoom = function(id, room) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/locations/${id}/rooms`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: room
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Deletes a room in a location.
+ * @param {Number} id     - The containing location ID.
+ * @param {Number} roomId - The room ID.
+ * @returns {Promise&lt;Object>} message
+ */
+TDAPI.prototype.deleteRoom = function(id, roomId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'DELETE',
+        url: `${this.baseUrl}/locations/${id}/rooms/${roomId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Edits the specified room in a location.
+ * @param {Number}       id     - The containing location ID.
+ * @param {Number}       roomId - The room ID.
+ * @param {LocationRoom} room   - The room with updated values.
+ * @returns {Promise&lt;LocationRoom>} room
+ */
+TDAPI.prototype.editRoom = function(id, roomId, room) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.baseUrl}/locations/${id}/rooms/${roomId}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: room
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets a list of locations.
+ * @param {LocationSearch} searchParams - The search parameters to use.
+ * @returns {Promise&lt;Location[]>} locations
+ */
+TDAPI.prototype.getLocations = function(searchParams) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/locations/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: searchParams || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Accepts a file, stores that file on disk, and places an entry into the databse to indicate to the import file processor to pick up the file and run a People import on it.
+ * @param {String} file - The path of the .xlsx file to upload.
+ * @returns {Promise&lt;Object>} message
+ */
+TDAPI.prototype.importPeople = function(file) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/people/import`,
+        auth: { bearer: bearerToken },
+        formData: {
+          'import.xlsx': fs.createReadStream(file)
+        }
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets the custom attributes for the specified component.
+ * @param {Number} componentId      - The component ID.
+ * @param {Number} associatedTypeId - The associated type ID to get attributes for. For instance, a ticket type ID might be provided here.
+ * @param {Number} appId            - The associated application ID to get attributes for.
+ * @returns {Promise&lt;CustomAttribute[]>}
+ */
+TDAPI.prototype.getCustomAttributes = function(componentId, associatedTypeId, appId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/attributes/custom` +
+              `?componentId=${componentId}` +
+              `&amp;associatedTypeId=${associatedTypeId}` + 
+              `&amp;appId=${appId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets a list of all asset statuses.
+ * @returns {Promise&lt;AssetStatus[]>}
+ */
+TDAPI.prototype.getAssetStatuses = function() {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/assets/statuses`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Creates an asset.
+ * @param {Asset} asset
+ * @returns {Promise&lt;Asset>}
+ */
+TDAPI.prototype.createAsset = function(asset) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: asset
+      });
+    })
+    .then(asset => new Asset(this, asset))
+    .catch(handleError);
+};
+
+/**
+ * Removes a resource from an asset.
+ * @param {Number} assetId    - The asset ID.
+ * @param {Number} resourceId - The resource ID.
+ * @returns {Promise&lt;Object>} message
+ */
+TDAPI.prototype.removeAssetResource = function(assetId, resourceId) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'DELETE',
+        url: `${this.baseUrl}/assets/${assetId}/users/${resourceId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets an asset.
+ * @param {Number} id - The asset ID.
+ * @returns {Promise&lt;Asset>}
+ */
+TDAPI.prototype.getAsset = function(id) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/assets/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .then(asset => new Asset(this, asset))
+    .catch(handleError);
+};
+
+/**
+ * Edits an existing asset.
+ * @param {Number} id    - The asset ID.
+ * @param {Asset}  asset - The asset with updated values.
+ * @returns {Promise&lt;Asset>}
+ */
+TDAPI.prototype.editAsset = function(id, asset) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets/${id}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: asset
+      });
+    })
+    .then(asset => new Asset(this, asset))
+    .catch(handleError);
+};
+
+/**
+ * Gets the feed entries for an asset.
+ * @param {Number} id - The asset ID.
+ * @returns {Promise&lt;ItemUpdate[]>}
+ */
+TDAPI.prototype.getAssetFeedEntries = function(id) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/assets/${id}/feed`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Adds a comment to an asset.
+ * @param {Number}    id        - The asset ID.
+ * @param {FeedEntry} feedEntry - The item update containing the comment.
+ * @returns {Promise&lt;ItemUpdate>}
+ */
+TDAPI.prototype.addAssetFeedEntry = function(id, feedEntry) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets/${id}/feed`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: feedEntry
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Adds an asset to a ticket.
+ * @param {Number} id       - The asset ID.
+ * @param {Number} ticketId - The ticket ID. This must belong to an application that the user can access.
+ * @returns {Promise&lt;Object>} message
+ */
+TDAPI.prototype.addAssetToTicket = function(id, ticketId) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets/${id}/tickets/${ticketId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Removes a ticket from an asset.
+ * @param {Number} id       - The asset ID.
+ * @param {Number} ticketId - The ticket ID. This must belong to an application that the user can access.
+ * @returns {Promise&lt;Object>} message
+ */
+TDAPI.prototype.removeAssetFromTicket = function(id, ticketId) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: '',
+        url: `${this.baseUrl}/assets/${id}/tickets/${ticketId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets the asset resources.
+ * @param {Number} id - The asset ID.
+ * @returns {Promise&lt;ResourceItem>}
+ */
+TDAPI.prototype.getAssetResources = function(id) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/assets/${id}/users`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Adds a resource to an asset.
+ * @param {Number} id         - The asset ID.
+ * @param {Number} resourceId - The resource ID.
+ * @returns {Promise&lt;Object>} message
+ */
+TDAPI.prototype.addAssetResource = function(id, resourceId) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets/${id}/users/${resourceId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Performs a bulk insert/update of assets in the system.
+ * @param {BulkImport&lt;Asset[]>} importData - The collection of items that are being imported and the corresponding import settings.
+ * @returns {Promise&lt;ItemResult>}
+ */
+TDAPI.prototype.importAssets = function(importData) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets/import`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: importData
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets a list of assets.
+ * @param {AssetSearch} [searchParams] - The search parameters to use.
+ * @returns {Promise&lt;Asset[]>}
+ */
+TDAPI.prototype.getAssets = function(searchParams) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: searchParams || {}
+      });
+    })
+    .then(assets => {
+      if(Array.isArray(assets)) {
+        return assets.map(asset => new Asset(this, asset));
+      } else {
+        return assets;
+      }
+    })
+    .catch(handleError);
+};
+
+
+// TDAPI.prototype.addAttachment = function(appId, ticketId, attachment) {
+//   return new Promise((resolve, reject) => {
+//     this.login()
+//       .then(bearerToken => {
+//         var opts = {
+//           url: `${this.baseUrl}/${appId}/tickets/${ticketId}/attachments`,
+//           auth: { bearer: bearerToken },
+//           formData: {
+//             file: {
+//               options: {
+//                 filename: 'test.json',
+//                 contentType: 'application/json'
+//               },
+//               value: JSON.stringify({
+//                 'item': '2390712939120',
+//                 'text': 'dasiodnasiodnsdoanodiasd'
+//               })
+//             }
+//           }
+//         };
+
+//         request.post(opts, function(err, response, body) {
+//           if(err) {
+//             reject(err);
+//           } else {
+//             resolve(body);
+//           }
+//         });
+//       }, err => {
+//         reject(err);
+//       });
+//   });
+// };
+
+// Generic error handling - TODO: Improve error detail
+function handleError(err) {
+  return Promise.reject(err);
+}
+
+// Check if JWT expired
+function tokenExpired(bearerToken) {
+  var decodedToken = jwtDecode(bearerToken);
+  if(decodedToken.exp) {
+    var exp = new Date(decodedToken.exp * 1000); // Convert seconds to ms for Date constructor
+    var now = new Date();
+    
+    if(exp > now) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+module.exports = TDAPI;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Dec 21 2016 11:45:33 GMT-0800 (Pacific Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

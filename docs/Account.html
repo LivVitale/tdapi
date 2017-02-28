@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Account - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/prism.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/prism.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Account.html">Account</a><ul class='methods'><li data-type='method'><a href="Account.html#edit">edit</a></li></ul></li><li><a href="Asset.html">Asset</a><ul class='methods'><li data-type='method'><a href="Asset.html#addFeedEntry">addFeedEntry</a></li><li data-type='method'><a href="Asset.html#addResource">addResource</a></li><li data-type='method'><a href="Asset.html#addToTicket">addToTicket</a></li><li data-type='method'><a href="Asset.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Asset.html#getResources">getResources</a></li><li data-type='method'><a href="Asset.html#removeFromTicket">removeFromTicket</a></li><li data-type='method'><a href="Asset.html#removeResource">removeResource</a></li><li data-type='method'><a href="Asset.html#update">update</a></li></ul></li><li><a href="Location.html">Location</a><ul class='methods'><li data-type='method'><a href="Location.html#createRoom">createRoom</a></li><li data-type='method'><a href="Location.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="Location.html#edit">edit</a></li><li data-type='method'><a href="Location.html#editRoom">editRoom</a></li></ul></li><li><a href="TDAPI.html">TDAPI</a><ul class='methods'><li data-type='method'><a href="TDAPI.html#addAssetFeedEntry">addAssetFeedEntry</a></li><li data-type='method'><a href="TDAPI.html#addAssetResource">addAssetResource</a></li><li data-type='method'><a href="TDAPI.html#addAssetToTicket">addAssetToTicket</a></li><li data-type='method'><a href="TDAPI.html#createAccount">createAccount</a></li><li data-type='method'><a href="TDAPI.html#createAsset">createAsset</a></li><li data-type='method'><a href="TDAPI.html#createLocation">createLocation</a></li><li data-type='method'><a href="TDAPI.html#createRoom">createRoom</a></li><li data-type='method'><a href="TDAPI.html#createUser">createUser</a></li><li data-type='method'><a href="TDAPI.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="TDAPI.html#editAccount">editAccount</a></li><li data-type='method'><a href="TDAPI.html#editAsset">editAsset</a></li><li data-type='method'><a href="TDAPI.html#editLocation">editLocation</a></li><li data-type='method'><a href="TDAPI.html#editRoom">editRoom</a></li><li data-type='method'><a href="TDAPI.html#getAccounts">getAccounts</a></li><li data-type='method'><a href="TDAPI.html#getAsset">getAsset</a></li><li data-type='method'><a href="TDAPI.html#getAssetFeedEntries">getAssetFeedEntries</a></li><li data-type='method'><a href="TDAPI.html#getAssetResources">getAssetResources</a></li><li data-type='method'><a href="TDAPI.html#getAssets">getAssets</a></li><li data-type='method'><a href="TDAPI.html#getAssetStatuses">getAssetStatuses</a></li><li data-type='method'><a href="TDAPI.html#getCustomAttributes">getCustomAttributes</a></li><li data-type='method'><a href="TDAPI.html#getGroupMembers">getGroupMembers</a></li><li data-type='method'><a href="TDAPI.html#getGroups">getGroups</a></li><li data-type='method'><a href="TDAPI.html#getLocation">getLocation</a></li><li data-type='method'><a href="TDAPI.html#getLocations">getLocations</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRole">getSecurityRole</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRoles">getSecurityRoles</a></li><li data-type='method'><a href="TDAPI.html#getTicket">getTicket</a></li><li data-type='method'><a href="TDAPI.html#getTickets">getTickets</a></li><li data-type='method'><a href="TDAPI.html#getTicketStatuses">getTicketStatuses</a></li><li data-type='method'><a href="TDAPI.html#getTicketTypes">getTicketTypes</a></li><li data-type='method'><a href="TDAPI.html#getUser">getUser</a></li><li data-type='method'><a href="TDAPI.html#getUsers">getUsers</a></li><li data-type='method'><a href="TDAPI.html#importAssets">importAssets</a></li><li data-type='method'><a href="TDAPI.html#importPeople">importPeople</a></li><li data-type='method'><a href="TDAPI.html#login">login</a></li><li data-type='method'><a href="TDAPI.html#patchTicket">patchTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetFromTicket">removeAssetFromTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetResource">removeAssetResource</a></li><li data-type='method'><a href="TDAPI.html#searchAccounts">searchAccounts</a></li><li data-type='method'><a href="TDAPI.html#updateTicket">updateTicket</a></li></ul></li><li><a href="Ticket.html">Ticket</a><ul class='methods'><li data-type='method'><a href="Ticket.html#addAsset">addAsset</a></li><li data-type='method'><a href="Ticket.html#addContact">addContact</a></li><li data-type='method'><a href="Ticket.html#edit">edit</a></li><li data-type='method'><a href="Ticket.html#getContacts">getContacts</a></li><li data-type='method'><a href="Ticket.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Ticket.html#patch">patch</a></li><li data-type='method'><a href="Ticket.html#removeAsset">removeAsset</a></li><li data-type='method'><a href="Ticket.html#removeContact">removeContact</a></li><li data-type='method'><a href="Ticket.html#update">update</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#addGroup">addGroup</a></li><li data-type='method'><a href="User.html#deleteFunctionalRole">deleteFunctionalRole</a></li><li data-type='method'><a href="User.html#getFunctionalRoles">getFunctionalRoles</a></li><li data-type='method'><a href="User.html#getGroups">getGroups</a></li><li data-type='method'><a href="User.html#getTickets">getTickets</a></li><li data-type='method'><a href="User.html#removeGroup">removeGroup</a></li><li data-type='method'><a href="User.html#setActive">setActive</a></li><li data-type='method'><a href="User.html#update">update</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-gettingstarted.html">Getting Started</a></li><li><a href="tutorial-usermanagement.html">User Management</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Account</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        Account
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="Account"><span class="type-signature"></span>new Account<span class="signature">(client, properties)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Account class
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>client</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="TDAPI.html">TDAPI</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The TDAPI client the account belongs to.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>properties</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The properties to be initialized on the Account object (see: Properties).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The account/department ID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The account/department name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The active status.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Address1</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The first address line.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Address2</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The second address line.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Address3</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The third address line.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Address4</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The fourth address line.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>City</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The city.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StateName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the state/province.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StateAbbr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The abbreviation of the state/province.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PostalCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The postal code.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Country</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The country.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The phone number.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Fax</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The fax number.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Url</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The website URL.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Notes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The account notes.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The created date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ModifiedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The last modified date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Code</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The account code.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IndustryID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The industry ID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IndustryName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The industry name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Domain</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The domain.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_account.js.html">structures/account.js</a>, <a href="structures_account.js.html#line32">line 32</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="edit"><span class="type-signature"></span>edit<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="global.html#Object">Object</a>>}</span></h4>
+
+    
+
+
+
+<div class="description">
+    Edits the account.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_account.js.html">structures/account.js</a>, <a href="structures_account.js.html#line51">line 51</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    body
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="global.html#Object">Object</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Dec 21 2016 11:45:33 GMT-0800 (Pacific Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>structures/location.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/prism.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/prism.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Account.html">Account</a><ul class='methods'><li data-type='method'><a href="Account.html#edit">edit</a></li></ul></li><li><a href="Asset.html">Asset</a><ul class='methods'><li data-type='method'><a href="Asset.html#addFeedEntry">addFeedEntry</a></li><li data-type='method'><a href="Asset.html#addResource">addResource</a></li><li data-type='method'><a href="Asset.html#addToTicket">addToTicket</a></li><li data-type='method'><a href="Asset.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Asset.html#getResources">getResources</a></li><li data-type='method'><a href="Asset.html#removeFromTicket">removeFromTicket</a></li><li data-type='method'><a href="Asset.html#removeResource">removeResource</a></li><li data-type='method'><a href="Asset.html#update">update</a></li></ul></li><li><a href="Location.html">Location</a><ul class='methods'><li data-type='method'><a href="Location.html#createRoom">createRoom</a></li><li data-type='method'><a href="Location.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="Location.html#edit">edit</a></li><li data-type='method'><a href="Location.html#editRoom">editRoom</a></li></ul></li><li><a href="TDAPI.html">TDAPI</a><ul class='methods'><li data-type='method'><a href="TDAPI.html#addAssetFeedEntry">addAssetFeedEntry</a></li><li data-type='method'><a href="TDAPI.html#addAssetResource">addAssetResource</a></li><li data-type='method'><a href="TDAPI.html#addAssetToTicket">addAssetToTicket</a></li><li data-type='method'><a href="TDAPI.html#createAccount">createAccount</a></li><li data-type='method'><a href="TDAPI.html#createAsset">createAsset</a></li><li data-type='method'><a href="TDAPI.html#createLocation">createLocation</a></li><li data-type='method'><a href="TDAPI.html#createRoom">createRoom</a></li><li data-type='method'><a href="TDAPI.html#createUser">createUser</a></li><li data-type='method'><a href="TDAPI.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="TDAPI.html#editAccount">editAccount</a></li><li data-type='method'><a href="TDAPI.html#editAsset">editAsset</a></li><li data-type='method'><a href="TDAPI.html#editLocation">editLocation</a></li><li data-type='method'><a href="TDAPI.html#editRoom">editRoom</a></li><li data-type='method'><a href="TDAPI.html#getAccounts">getAccounts</a></li><li data-type='method'><a href="TDAPI.html#getAsset">getAsset</a></li><li data-type='method'><a href="TDAPI.html#getAssetFeedEntries">getAssetFeedEntries</a></li><li data-type='method'><a href="TDAPI.html#getAssetResources">getAssetResources</a></li><li data-type='method'><a href="TDAPI.html#getAssets">getAssets</a></li><li data-type='method'><a href="TDAPI.html#getAssetStatuses">getAssetStatuses</a></li><li data-type='method'><a href="TDAPI.html#getCustomAttributes">getCustomAttributes</a></li><li data-type='method'><a href="TDAPI.html#getGroupMembers">getGroupMembers</a></li><li data-type='method'><a href="TDAPI.html#getGroups">getGroups</a></li><li data-type='method'><a href="TDAPI.html#getLocation">getLocation</a></li><li data-type='method'><a href="TDAPI.html#getLocations">getLocations</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRole">getSecurityRole</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRoles">getSecurityRoles</a></li><li data-type='method'><a href="TDAPI.html#getTicket">getTicket</a></li><li data-type='method'><a href="TDAPI.html#getTickets">getTickets</a></li><li data-type='method'><a href="TDAPI.html#getTicketStatuses">getTicketStatuses</a></li><li data-type='method'><a href="TDAPI.html#getTicketTypes">getTicketTypes</a></li><li data-type='method'><a href="TDAPI.html#getUser">getUser</a></li><li data-type='method'><a href="TDAPI.html#getUsers">getUsers</a></li><li data-type='method'><a href="TDAPI.html#importAssets">importAssets</a></li><li data-type='method'><a href="TDAPI.html#importPeople">importPeople</a></li><li data-type='method'><a href="TDAPI.html#login">login</a></li><li data-type='method'><a href="TDAPI.html#patchTicket">patchTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetFromTicket">removeAssetFromTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetResource">removeAssetResource</a></li><li data-type='method'><a href="TDAPI.html#searchAccounts">searchAccounts</a></li><li data-type='method'><a href="TDAPI.html#updateTicket">updateTicket</a></li></ul></li><li><a href="Ticket.html">Ticket</a><ul class='methods'><li data-type='method'><a href="Ticket.html#addAsset">addAsset</a></li><li data-type='method'><a href="Ticket.html#addContact">addContact</a></li><li data-type='method'><a href="Ticket.html#edit">edit</a></li><li data-type='method'><a href="Ticket.html#getContacts">getContacts</a></li><li data-type='method'><a href="Ticket.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Ticket.html#patch">patch</a></li><li data-type='method'><a href="Ticket.html#removeAsset">removeAsset</a></li><li data-type='method'><a href="Ticket.html#removeContact">removeContact</a></li><li data-type='method'><a href="Ticket.html#update">update</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#addGroup">addGroup</a></li><li data-type='method'><a href="User.html#deleteFunctionalRole">deleteFunctionalRole</a></li><li data-type='method'><a href="User.html#getFunctionalRoles">getFunctionalRoles</a></li><li data-type='method'><a href="User.html#getGroups">getGroups</a></li><li data-type='method'><a href="User.html#getTickets">getTickets</a></li><li data-type='method'><a href="User.html#removeGroup">removeGroup</a></li><li data-type='method'><a href="User.html#setActive">setActive</a></li><li data-type='method'><a href="User.html#update">update</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-gettingstarted.html">Getting Started</a></li><li><a href="tutorial-usermanagement.html">User Management</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">structures/location.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>var request = require('request-promise');
+
+/**
+ * Location class
+ * @constructor
+ * @param    {TDAPI}   client       - The TDAPI client the location belongs to.
+ * @param    {Object}  properties   - The properties to be initialized on the Location object (see: Properties).
+ * 
+ * @property {Number} ID - The location ID.
+ * @property {String} Name - The location name.
+ * @property {String} Description - The description.
+ * @property {String} ExternalID - The external identifier for the location.
+ * @property {Boolean} IsActive - The active status.
+ * @property {String} Address - The address.
+ * @property {String} City - The city.
+ * @property {String} State - The state/province.
+ * @property {String} PostalCode - The postal code.
+ * @property {String} Country - The country.
+ * @property {Boolean} IsRoomRequired - A value indicating whether the location requires a room when specified for an asset.
+ * @property {Number} AssetsAcount - The number of assets associated with this location.
+ * @property {Number} TicketsCount - The number of tickets associated with this location.
+ * @property {Number} RoomsCount - The number of rooms associated with this location.
+ * @property {LocationRoom[]} Rooms - The rooms associated with this location.
+ * @property {Date} CreatedDate - The created date.
+ * @property {Guid} CreatedUid - The UID of the creator.
+ * @property {String} CreatedFullName - The full name of the creator.
+ * @property {Date} ModifiedDate - The last modified date.
+ * @property {Guid} ModifiedUid - The UID of the last person to modify the location.
+ * @property {String} ModifiedFullName - The full name of the last person to modify the location.
+ * @property {Number|null} Latitude - The latitude of the location.
+ * @property {Number|null} Longitude - The longitude of the location.
+ */
+function Location(client, properties) {
+  this.client = client;
+  Object.defineProperty(this, 'client', { enumerable: false, configurable: false});
+
+  if(properties) this.init(properties);
+}
+
+Location.prototype.init = function(properties) {
+  for(var property in properties) {
+    if(validAttributes.indexOf(property) > -1) {
+      this[property] = properties[property];
+    }
+  }
+};
+
+/**
+ * Edits the location.
+ * @returns {Promise&lt;Location>} location
+ */
+Location.prototype.edit = function() {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.client.baseUrl}/locations/${this.ID}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: this
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Creates a room in the location.
+ * @param   {LocationRoom} room - The room to add to the location.
+ * @returns {Promise&lt;LocationRoom>} room
+ */
+Location.prototype.createRoom = function(room) {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.client.baseUrl}/locations/${this.ID}/rooms`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: room
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Deletes a room in the location.
+ * @param {Number} roomId - The ID of the room to delete.
+ * @returns {Promise&lt;Object>} message
+ */
+Location.prototype.deleteRoom = function(roomId) {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'DELETE',
+        url: `${this.client.baseUrl}/locations/${this.ID}/rooms/${roomId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Edits the specified room in the location.
+ * @param {Number} roomId - The ID of the room to edit.
+ * @returns {Promise&lt;LocationRoom>} room
+ */
+Location.prototype.editRoom = function(roomId) {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.client.baseUrl}/locations/${this.ID}/rooms/${roomId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+// Generic error handling - TODO: Improve error detail
+function handleError(err) {
+  return Promise.reject(err);
+}
+
+validLocationAttributes = [
+  "ID",
+  "Name",
+  "Description",
+  "ExternalID",
+  "IsActive",
+  "Address",
+  "City",
+  "State",
+  "PostalCode",
+  "Country",
+  "IsRoomRequired",
+  "AssetsCount",
+  "TicketsCount",
+  "RoomsCount",
+  "Rooms",
+  "CreatedDate",
+  "CreatedUid",
+  "CreatedFullName",
+  "ModifiedDate",
+  "ModifiedUid",
+  "ModifiedFullName",
+  "Latitude",
+  "Longitude"
+];
+
+module.exports = Location;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Dec 21 2016 11:45:33 GMT-0800 (Pacific Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

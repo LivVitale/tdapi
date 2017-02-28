@@ -1,0 +1,9266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Global - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/prism.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/prism.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Account.html">Account</a><ul class='methods'><li data-type='method'><a href="Account.html#edit">edit</a></li></ul></li><li><a href="Asset.html">Asset</a><ul class='methods'><li data-type='method'><a href="Asset.html#addFeedEntry">addFeedEntry</a></li><li data-type='method'><a href="Asset.html#addResource">addResource</a></li><li data-type='method'><a href="Asset.html#addToTicket">addToTicket</a></li><li data-type='method'><a href="Asset.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Asset.html#getResources">getResources</a></li><li data-type='method'><a href="Asset.html#removeFromTicket">removeFromTicket</a></li><li data-type='method'><a href="Asset.html#removeResource">removeResource</a></li><li data-type='method'><a href="Asset.html#update">update</a></li></ul></li><li><a href="Location.html">Location</a><ul class='methods'><li data-type='method'><a href="Location.html#createRoom">createRoom</a></li><li data-type='method'><a href="Location.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="Location.html#edit">edit</a></li><li data-type='method'><a href="Location.html#editRoom">editRoom</a></li></ul></li><li><a href="TDAPI.html">TDAPI</a><ul class='methods'><li data-type='method'><a href="TDAPI.html#addAssetFeedEntry">addAssetFeedEntry</a></li><li data-type='method'><a href="TDAPI.html#addAssetResource">addAssetResource</a></li><li data-type='method'><a href="TDAPI.html#addAssetToTicket">addAssetToTicket</a></li><li data-type='method'><a href="TDAPI.html#createAccount">createAccount</a></li><li data-type='method'><a href="TDAPI.html#createAsset">createAsset</a></li><li data-type='method'><a href="TDAPI.html#createLocation">createLocation</a></li><li data-type='method'><a href="TDAPI.html#createRoom">createRoom</a></li><li data-type='method'><a href="TDAPI.html#createUser">createUser</a></li><li data-type='method'><a href="TDAPI.html#deleteRoom">deleteRoom</a></li><li data-type='method'><a href="TDAPI.html#editAccount">editAccount</a></li><li data-type='method'><a href="TDAPI.html#editAsset">editAsset</a></li><li data-type='method'><a href="TDAPI.html#editLocation">editLocation</a></li><li data-type='method'><a href="TDAPI.html#editRoom">editRoom</a></li><li data-type='method'><a href="TDAPI.html#getAccounts">getAccounts</a></li><li data-type='method'><a href="TDAPI.html#getAsset">getAsset</a></li><li data-type='method'><a href="TDAPI.html#getAssetFeedEntries">getAssetFeedEntries</a></li><li data-type='method'><a href="TDAPI.html#getAssetResources">getAssetResources</a></li><li data-type='method'><a href="TDAPI.html#getAssets">getAssets</a></li><li data-type='method'><a href="TDAPI.html#getAssetStatuses">getAssetStatuses</a></li><li data-type='method'><a href="TDAPI.html#getCustomAttributes">getCustomAttributes</a></li><li data-type='method'><a href="TDAPI.html#getGroupMembers">getGroupMembers</a></li><li data-type='method'><a href="TDAPI.html#getGroups">getGroups</a></li><li data-type='method'><a href="TDAPI.html#getLocation">getLocation</a></li><li data-type='method'><a href="TDAPI.html#getLocations">getLocations</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRole">getSecurityRole</a></li><li data-type='method'><a href="TDAPI.html#getSecurityRoles">getSecurityRoles</a></li><li data-type='method'><a href="TDAPI.html#getTicket">getTicket</a></li><li data-type='method'><a href="TDAPI.html#getTickets">getTickets</a></li><li data-type='method'><a href="TDAPI.html#getTicketStatuses">getTicketStatuses</a></li><li data-type='method'><a href="TDAPI.html#getTicketTypes">getTicketTypes</a></li><li data-type='method'><a href="TDAPI.html#getUser">getUser</a></li><li data-type='method'><a href="TDAPI.html#getUsers">getUsers</a></li><li data-type='method'><a href="TDAPI.html#importAssets">importAssets</a></li><li data-type='method'><a href="TDAPI.html#importPeople">importPeople</a></li><li data-type='method'><a href="TDAPI.html#login">login</a></li><li data-type='method'><a href="TDAPI.html#patchTicket">patchTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetFromTicket">removeAssetFromTicket</a></li><li data-type='method'><a href="TDAPI.html#removeAssetResource">removeAssetResource</a></li><li data-type='method'><a href="TDAPI.html#searchAccounts">searchAccounts</a></li><li data-type='method'><a href="TDAPI.html#updateTicket">updateTicket</a></li></ul></li><li><a href="Ticket.html">Ticket</a><ul class='methods'><li data-type='method'><a href="Ticket.html#addAsset">addAsset</a></li><li data-type='method'><a href="Ticket.html#addContact">addContact</a></li><li data-type='method'><a href="Ticket.html#edit">edit</a></li><li data-type='method'><a href="Ticket.html#getContacts">getContacts</a></li><li data-type='method'><a href="Ticket.html#getFeedEntries">getFeedEntries</a></li><li data-type='method'><a href="Ticket.html#patch">patch</a></li><li data-type='method'><a href="Ticket.html#removeAsset">removeAsset</a></li><li data-type='method'><a href="Ticket.html#removeContact">removeContact</a></li><li data-type='method'><a href="Ticket.html#update">update</a></li></ul></li><li><a href="User.html">User</a><ul class='methods'><li data-type='method'><a href="User.html#addGroup">addGroup</a></li><li data-type='method'><a href="User.html#deleteFunctionalRole">deleteFunctionalRole</a></li><li data-type='method'><a href="User.html#getFunctionalRoles">getFunctionalRoles</a></li><li data-type='method'><a href="User.html#getGroups">getGroups</a></li><li data-type='method'><a href="User.html#getTickets">getTickets</a></li><li data-type='method'><a href="User.html#removeGroup">removeGroup</a></li><li data-type='method'><a href="User.html#setActive">setActive</a></li><li data-type='method'><a href="User.html#update">update</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-gettingstarted.html">Getting Started</a></li><li><a href="tutorial-usermanagement.html">User Management</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Global</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        
+                
+<h4 class="name" id="AccountSearch">AccountSearch</h4>
+
+
+
+
+<div class="description">
+    A set of filtering options used for searching accounts/departments.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>SearchText</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The search text to use.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CustomAttributes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#CustomAttribute">CustomAttribute</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The custom attributes to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MaxResults</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum number of records to return.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line346">line 346</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="AdminUser">AdminUser</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>BEID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The BEID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WebServicesKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The web services key.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tdapi.js.html">tdapi.js</a>, <a href="tdapi.js.html#line40">line 40</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="APIUser">APIUser</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>UserName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The username to authenticate as.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The user's password.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tdapi.js.html">tdapi.js</a>, <a href="tdapi.js.html#line34">line 34</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="Array">Array</h4>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="Attachment">Attachment</h4>
+
+
+
+
+<div class="description">
+    An attachment.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The attachment ID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AttachmentType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The attachment type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ItemID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The item ID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The creation date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The file name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Size</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The size of the attachment, in bytes.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Uri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The URI for this attachment.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ContentUri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The URI to retrieve the attachment content.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line282">line 282</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="Boolean">Boolean</h4>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="CustomAttribute">CustomAttribute</h4>
+
+
+
+
+<div class="description">
+    A single custom attribute.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The attribute ID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The attribute name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Order</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The order of the attribute. Attributes are first sorted by order (ascending) and their name (also ascending).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Description</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The attribute description.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SectionID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the associated attribute section.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SectionName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the associated attribute section.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FieldType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The field type of the attribute.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DataType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The data type of the attribute.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Choices</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#CustomAttributeChoice">CustomAttributeChoice</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The choices for the attribute.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsRequired</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether the attribute is required.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsUpdatable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether the attribute is updatable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value of the attribute.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ValueText</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The text value of the attribute. For choice attributes, this will be a comma-separated list of all the currently selected choices (referenced by choice ID).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ChoicesText</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The text of the selected choices. This will be a comma-separated list of the text of each selected choice.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AssociatedItemIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The list of all item types (represented as IDs) that are associated with the attribute.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line168">line 168</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="CustomAttributeChoice">CustomAttributeChoice</h4>
+
+
+
+
+<div class="description">
+    A single choice for a custom attribute.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The choice ID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the choice. This doubles as the display text for the choice.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The active status of the choice.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DateCreated</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The date the choice was created.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DateModified</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The date the choice was last modified.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Order</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The order of the choice in the list. Choices are first sorted by order (ascending) and their name (also ascending).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line188">line 188</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="Group">Group</h4>
+
+
+
+
+<div class="description">
+    A group containing any number of users.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The group ID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The group name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Description</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The group description.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The group's active status.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The date/time the group was created.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ModifiedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The date/time the group was last modified.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line37">line 37</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="GroupSearch">GroupSearch</h4>
+
+
+
+
+<div class="description">
+    A set of filtering options used for searching groups.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>IsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The active status to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NameLike</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The string to use for LIKE-based filtering on the group name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>HasAppID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the application to filter on. If specified, will only include groups with at least one active member who has been granted access to this application.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>HasSystemAppName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the system application to filter on. If specified, will only include groups with at least one active member who has been granted access to this application.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line87">line 87</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="Guid">Guid</h4>
+
+
+
+
+<div class="description">
+    A 128-bit integer Number that represents a unique identifier
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line32">line 32</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="ItemUpdate">ItemUpdate</h4>
+
+
+
+
+<div class="description">
+    A feed entry that has already been posted
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedRefID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The integer based ID of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedFirstName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The first name of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedLastName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The last name of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedByPicPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The path to the creator's profile picture.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The creation date of the feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LastUpdatedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The date the feed entry was last updated. Replying to this feed entry will update this date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ProjectID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the associated project.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ProjectName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the associated project.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PlanID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the associated plan or ticket.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PlanName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the associated plan or ticket.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ItemType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The item type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ItemID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The item ID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ItemTitle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The item title.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ReferenceID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The reference ID. This value is used when the associated item is normally referred to by a GUID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Body</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The body of the feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UpdateType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The type of the feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NotifiedList</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The list of notified people.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsPrivate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether this feed entry is private.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsParent</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether this feed entry is a parent for other feed entries.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Replies</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Object">Object</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The replies to this feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RepliesCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of replies to this feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Likes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#ItemUpdateLike">ItemUpdateLike</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The likes for this feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ILike</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether the current user "liked" this feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LikesCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of likes for this feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Participants</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Object">Object</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The participants. This list consists of the person who is responsible for the original feed entry as well as any other individuals who have replied to it.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>BreadcrumbsHtml</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The breadcrumbs HTML. This is not loaded from the databse; it is used purely for the purpose of sending HTML to the client for rendering breadcrumbs, and should not be populated by the calling application.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>HasAttachment</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether this instance has an attachment.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line222">line 222</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="ItemUpdateLike">ItemUpdateLike</h4>
+
+
+
+
+<div class="description">
+    A "like" of a feed entry
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the "like"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UserFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the person making the "like"</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Uid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the person making the "like"</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line267">line 267</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="ItemUpdateReply">ItemUpdateReply</h4>
+
+
+
+
+<div class="description">
+    A reply to a feed entry
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the reply</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Body</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The body of the reply</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the person making the reply</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the person making the reply</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The date of the reply</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line257">line 257</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="LocationRoom">LocationRoom</h4>
+
+
+
+
+<div class="description">
+    A room at a location.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ExternalID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The external identifier for the room.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AssetsCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of assets associated with this room.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TicketsCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of tickets associated with this room.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The created date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedUID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the creator.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line354">line 354</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="null">null</h4>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line27">line 27</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="Number">Number</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#String">String</a></span>
+|
+
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line21">line 21</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number</a></li>
+        
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="Object">Object</h4>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="Participant">Participant</h4>
+
+
+
+
+<div class="description">
+    A participant in a feed discussion
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>FullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the participant</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The email address of the participant</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line275">line 275</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="ResourceItem">ResourceItem</h4>
+
+
+
+
+<div class="description">
+    A single person, group, or account/department.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ItemRole</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The role this person or group has on the associated item.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of this person or group.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Initials</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The initials to be displayed if no profile image is specified for the item.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value of the item.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RefValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The reference value.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ProfileImageFileName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The profile image file name.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line335">line 335</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="SecurityRole">SecurityRole</h4>
+
+
+
+
+<div class="description">
+    A security role for any number of users. Security roles are essentially a license type and a set of permissions that can be granted to users.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the security role.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the security role.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The created date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ModifiedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The modified date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UserCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The number of users who have the security role.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AppID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the associated application, or 0 if this is a top-level security role.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Permissions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#String">String</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The permissions granted to users with this security role.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LicenseType</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The license type of the security role.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LicenseTypeName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the license type of the security role.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line48">line 48</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="SecurityRoleSearch">SecurityRoleSearch</h4>
+
+
+
+
+<div class="description">
+    A set of filtering options used for searching functional roles.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>NameLike</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The security role name to perform LIKE-based filtering on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AppID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The application ID to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LicenseTypeID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The license type ID to filter on.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line79">line 79</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="String">String</h4>
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="TDAPIOptions">TDAPIOptions</h4>
+
+
+
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>baseUrl</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The base URL of your TeamDynamix API (i.e. https://api.teamdynamix.com/TDWebAPI/api)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>credentials</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#APIUser">APIUser</a></span>
+|
+
+<span class="param-type"><a href="global.html#AdminUser">AdminUser</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The API User or Admin User to authenticate as.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="tdapi.js.html">tdapi.js</a>, <a href="tdapi.js.html#line27">line 27</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="TicketFeedEntry">TicketFeedEntry</h4>
+
+
+
+
+<div class="description">
+    A feed entry for a Ticket
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>NewStatusID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The new status ID. Leave null or 0 to not change the status.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsPrivate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether this feed entry is private.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Comments</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The comments of the feed entry.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Notify</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#String">String</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The individuals to notify.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line213">line 213</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="TicketSearch">TicketSearch</h4>
+
+
+
+
+<div class="description">
+    A set of filtering options used for searching tickets.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>TicketClassification</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum number of results to return, or 0 for no limit.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TicketID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ticket ID to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ParentTicketID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The parent ticket ID to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SearchText</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The search text to use. Search text will incorporate the title, description, custom attribute text, reference code, and the text of any feed items.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StatusIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The status IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PastStatusIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The historical status IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StatusClassIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The status class IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PriorityIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The priorty IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UrgencyIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The urgency IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ImpactIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The impact IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AccountIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The account/department IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TypeIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ticket type IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SourceIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The source IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UpdatedDateFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum updated date to filter on. Only tickets that have status changes within the range specified by this value and UpdatedDateTo (and optionally, only by UpdatedByUid) will be included.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UpdatedDateTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum updated date to filter on. Only tickets that have status changes within the range specified by this value and UpdatedDateFrom (and optionally, only by UpdatedByUid) will be included.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UpdatedByUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the updating person to filter on. Only tickets that have status changes by this person (and optionally, only within the date range specified by UpdatedDateFrom and UpdatedDateTo) will be included.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ModifiedDateFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum last modified date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ModifiedDateTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum last modified date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ModifiedByUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the person who last modified a ticket to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StartDateFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum start date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StartDateTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum start date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EndDateFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum end date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EndDateTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum end date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RespondedDateFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum responded date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RespondedDateTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum responded date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RespondedByUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the responding person to filter on,</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ClosedDateFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum closed date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ClosedDateTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum closed date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ClosedByUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the closing person to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RespondByDateFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum "respond by" deadline to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RespondByDateTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum "respond by" deadline to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CloseByDateFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum SLA "resolve by" deadline to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CloseByDateTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum SLA "resolve by" deadline to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDateFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum created date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDateTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum created date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedByUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the creator to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DaysOldFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum age to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DaysOldTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum age to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ResponsibilityUids</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Guid">Guid</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UIDs of the responsible individuals to filter on. This differs from PrimaryResponsibilityUids in that it includes responsibility from ticket tasks.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ResponsibilityGroupIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The IDs of the responsible groups to filter on. This differs from PrimaryResponsibilityGroupIDs in that it includes responsibility from ticket tasks.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CompletedTaskResponsibilityFilter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The filter to use for ResponsibilityUids and ResponsibilityGroupIDs with regards to ticket tasks.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PrimaryResponsibilityUids</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Guid">Guid</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UIDs of the primarily-responsible individuals to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PrimaryResponsibilityGroupIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The primarily-responsible group IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SlaIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The SLA IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SlaViolationStatus</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The SLA violation status to filter on. A value of true indicates that only tickets with violated SLAs should be included, whereas a value of false indicates that only tickets without a violated SLA (including no SLA) should be included.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SlaUnmetConstraints</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The unmet SLA deadlines to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>KBArticleIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The knowledge base article IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AssignmentStatus</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The assignment status to filter on. A value of true indicates that only tickets assigned to individuals should be included, whereas a value of false indicates that only tickets not assigned to an individual should be included.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ConvertedToTask</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The task conversion status to filter on. A value of true indicates that only tickets converted to project asks should be included, whereas a value of false indicates that only tickets not converted to a project task should be included.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ReviewerUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the reviewing person to filter on. This will include any groups that the reviews belongs to.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SubmitterUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the submitting person to filter on. Searching for a "submitter" will include any tickets that the person has created and/or requested.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UserAccountsUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the person to filter on for submission or assocaited accounts/departments. This will return any tikets for which the person is the "submitter", in addition to any tickets that are associated with an account/department that has been explicitly assigned to the person.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UserGroupsUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the person to filter on for group responsibility. This will return any tickets for which one of the person's groups is primarily responsible.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RequestorUids</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Guid">Guid</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The requestor UIDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RequestorNameSearch</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The text to perform a LIKE/"contains" search on the requestor's full name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RequestorEmailSearch</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The text to perform a LIKE/"contains" search on the requestor's email address.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RequestorPhoneSearch</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The text to perform a LIKE/"contains" search on the requestor's phone number.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ConfigurationItemIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The IDs of the associated CIs to filter on. To be included in the search results, a ticket must be associated with one or more of the listed CIs.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ExcludeConfigurationItemIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The IDs of the associated CIs to exclude on. To be included in the search results, a ticket must NOT be associated with any of the listed CIs.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsOnHold</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The "on hold" status to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GoesOffHoldFrom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The minimum "goes off hold" date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>GoldOffHoldTo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum "goes off hold" date to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LocationIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The location IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LocationRoomIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The location room IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ServiceIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The associated service IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CustomAttributes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#CustomAttribute">CustomAttribute</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The custom attributes to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>HasReferenceCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Sets whether or not the returned tickets should have a reference code.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line96">line 96</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="TicketStatus">TicketStatus</h4>
+
+
+
+
+<div class="description">
+    A ticket status.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the ticket status.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AppID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the containing application.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AppName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the containing application.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The status name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Description</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The status description.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Order</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The order of the status when displayed in a list.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StatusClass</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The status class.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether the status is active.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsDefault</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether this status is the default for the application.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line199">line 199</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="TicketTask">TicketTask</h4>
+
+
+
+
+<div class="description">
+    A ticket task or activity.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the task.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TicketID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the associated ticket.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The title.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Description</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The description.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether this task is active. Tasks are inactive if their predecessor task has not been completed.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StartDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The start date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EndDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The end date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CompleteWithinMinutes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The expected duration, in minutes, of the task. This value is in operational minutes, and so operational hours, weekends, and days off are all taken into account.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EstimatedMinutes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The estimated minutes.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ActualMinutes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The time, in minutes, entered against the task/activity.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PercentComplete</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The percent complete.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The created date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CreatedEmail</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The email address of the creator.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ModifiedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The last modified date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ModifiedUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the last person to modify the task.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ModifiedFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the last person to modify the task.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CompletedDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The completed date.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CompletedUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the person who completed the task.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CompletedFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the person who completed the task.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ResponsibleUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the responsible person.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ResponsibleFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the responsible person,</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ResponsibleEmail</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The email address of the responsible person.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ResponsibleGroupID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the responsible group.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ResponsibleGroupName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the responsible group.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PredecessorID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the predecessor task.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PredecessorTitle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The title of the predecessor task.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Order</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The order in which the task should be displayed in the list of the ticket's tasks/activities.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TypeID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The type ID. This indicates if this is a regular ticket task, a scheduled maintenance activity, or something else.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DetectedConflictCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The total number of detected conflicts for this task/maintenance activity.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DetectedConflictTypes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The types of detected conflicts for this task/maintenance activity.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LastConflictScanDateUtc</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UTC date/time this task/activity was last scanned for conflicts.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line297">line 297</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="TicketType">TicketType</h4>
+
+
+
+
+<div class="description">
+    A ticket type.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the ticket type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AppID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the containing application.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AppName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the containing application.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ticket type name.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Description</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ticket type description.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CategoryID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the containing category.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CategoryName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the containing category.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the type, which includes the type category.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether the ticket type is active.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ReviewerUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the reviewing person.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ReviewerFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the reviewing person.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ReviewerEmail</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The email address of the reviewing person.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ReviewingGroupID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the reviewing group.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ReviewingGroupName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the reviewing group.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NotifyReviewer</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A value indicating whether the reviewing resource(s) (and other addresses, if specified) should be notified of any new tickets that are created with this type (or later changed to this type).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>OtherNotificationEmailAddresses</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The other email addresses to notify of incoming tickets when the reviewer notification is enabled.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultSLAID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the default SLA to use when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultSLAName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the default SLA to use when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultSLAIsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The active status of the default SLA to use when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultTaskTemplateID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the default task template to use when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultTaskTemplateName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the default task template to use when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultTaskTemplateIsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The active status of the default task template to use when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultResponsibleUid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The UID of the default person to assign when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultResponsibleFullName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The full name of the default person to assign when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultResponsibleGroupID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the default group to assign when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DefaultResponsibleGroupName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the default group to assign when tickets are created with this type.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WorkspaceID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the associated workspace.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WorkspaceName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the associated workspace.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line367">line 367</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+                
+<h4 class="name" id="UserSearch">UserSearch</h4>
+
+
+
+
+<div class="description">
+    A set of filtering options used for searching users.
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="global.html#Object">Object</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>SearchText</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The search text to perform LIKE-based filtering on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsActive</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The active status to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>IsEmployee</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The employee status to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AppName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the application to filter on. If specified, will only include users who have been granted access to this application.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AccountID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The account ID to filter on. If specified, will only include users who list the account as their default.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MaxResults</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The maximum number of records to return.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ReferenceIDs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#Number">Number</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The reference IDs to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ExternalID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The external ID to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>AlternateID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The alternate ID to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>UserName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The username to filter on.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SecurityRoleID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+|
+
+<span class="param-type"><a href="global.html#null">null</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The security role ID to filter on. If specified, will only include users who have this security role.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="structures_util.js.html">structures/util.js</a>, <a href="structures_util.js.html#line63">line 63</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+            
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Dec 21 2016 11:45:33 GMT-0800 (Pacific Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

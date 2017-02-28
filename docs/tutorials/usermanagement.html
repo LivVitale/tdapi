@@ -1,0 +1,34 @@
+<pre><code class="language-js line-numbers">// Define search options as per https://api.teamdynamix.com/TDWebApi/Home/type/TeamDynamix.Api.Users.UserSearch
+var searchParams = {
+  IsActive: true,
+  UserName: 'jsmith',
+  MaxResults: 10
+};
+
+// Get users matching defined searched options
+td.getUsers(searchParams)
+  .then(users => td.getUser(users[0].UID)) // Get the full user profile for the first user in results
+  .then(user => {
+    // Make some changes to the user
+    user.LastName = "Smith";
+    user.AlternateEmail = "jsmith@example.com";
+
+    // Update the user with modified attributes
+    return user.update();
+  })
+  .catch(handleError);
+  
+
+// Users have a variety of utility functions to simplify API calls...
+
+// Get a user's tickets from a ticketing app with ID 111
+jsmith.getTickets(111)
+  .then(tickets => tickets[0].getFeedEntries)  // Get the feed entries for the first ticket
+  .then(console.log)                           // Print returned entries to console
+  .catch(handleError);
+
+// Set a user to inactive
+jsmith.setActive(false)
+  .then(console.log)    // Check the response message to ensure user was updated
+  .catch(handleError)
+</code></pre>

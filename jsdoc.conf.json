@@ -1,0 +1,22 @@
+{
+  "opts": {
+    "destination": "./docs",
+    "template": "./docs/themes/minami",
+    "tutorials": "./docs/tutorials"
+  },
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": [
+      "tdapi.js",
+      "structures/"
+    ]
+  },
+  "plugins": [],
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  }
+}
