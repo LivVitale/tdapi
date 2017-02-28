@@ -216,6 +216,41 @@ TDAPI.prototype.getGroupMembers = function(groupId) {
 };
 
 /**
+ * Creates a Ticket.
+ * @param {Number} appId                - The ID of the ticketing application.
+ * @param {any} ticket                  - The ticket body
+ * @param {TicketCreateOptions} options - The creation options
+ */
+TDAPI.prototype.createTicket = function(appId, ticket, options) {
+  return this.login()
+    .then(bearerToken => {
+      if(!options) {
+        options = {
+          EnableNotifyReviewer: false,
+          NotifyRequestor: false,
+          NotifyResponsible: false,
+          AutoAssignResponsibility: false,
+          AllowRequestorCreation: false
+        };
+      }
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/${appId}/tickets?` +
+              `EnableNotifyReviewer=${options.EnableNotifyReviewer || false}` +
+              `&NotifyRequestor=${options.NotifyRequestor || false}` + 
+              `&NotifyResponsible=${options.NotifyResponsible || false}` +
+              `&AutoAssignResponsibility=${options.AutoAssignResponsibility || false}` +
+              `&AllowRequestorCreation=${options.AllowRequestorCreation || false}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: ticket || {}
+      });
+    })
+    .then(ticket => new Ticket(this, ticket))
+    .catch(handleError);
+};
+
+/**
  * Gets a Ticket.
  * @param {Number} appId     - The ID of the ticketing application.
  * @param {Number} ticketId  - The ID of the ticket.

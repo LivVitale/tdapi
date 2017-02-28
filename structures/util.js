@@ -396,3 +396,13 @@
  * @property {Number} WorkspaceID - The ID of the associated workspace.
  * @property {String} WorkspaceName - The name of the associated workspace.
  */
+
+/**
+ * Options for ticket creation.
+ * @typedef  {Object}  TicketCreateOptions
+ * @property {Boolean} EnableNotifyReviewer     - A value indicating whether the reviewer notification should be enabled. Even if this value is true, the reviewer will not necessarily be notified unless it is explicity specified on the ticket's type.
+ * @property {Boolean} NotifyRequestor          - A value indicating whether the requestor should be notified.
+ * @property {Boolean} NotifyResponsible        - A value indicating whether the responsible resource(s) should be notified.
+ * @property {Boolean} AutoAssignResponsibility - A value indicating whether the ticket's responsibility should be auto-assigned based on the type.
+ * @property {Boolean} AllowRequestorCreation   - A value indicating whether a requestor should be created if an existing person with machine information cannot be found.
+ */
