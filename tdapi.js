@@ -900,6 +900,106 @@ TDAPI.prototype.getAssets = function(searchParams) {
     .catch(handleError);
 };
 
+/**
+ * Gets the choices for the specified custom attribute.
+ * @param {Number} id - The ID of the custom attribute. 
+ * @returns {Promise<CustomAttributeChoice[]>}
+ */
+TDAPI.prototype.getCustomAttributeChoices = function(id) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/attributes/${id}/choices`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Adds a new choice to the specified custom attribute.
+ * @param {Number} id                                   - The ID of the custom attribute.
+ * @param {CustomAttributeChoice} customAttributeChoice - The choice to add to the custom attribute.
+ * @returns {Promise<CustomAttributeChoice>}
+ */
+TDAPI.prototype.addCustomAttributeChoice = function(id, customAttributeChoice) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/attributes/${id}/choices`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: customAttributeChoice || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Removes the specified choice from the custom attribute.
+ * @param {Number} id    - The custom attribute ID.
+ * @param {any} choiceId - The choice ID.
+ * @returns {Promise<Object>} message
+ */
+TDAPI.prototype.removeCustomAttributeChoice = function(id, choiceId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'DELETE',
+        url: `${this.baseUrl}/attributes/${id}/${choiceId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Edits an existing choice associated with the specified custom attribute.
+ * @param {Number} id                                   - The custom attribute ID.
+ * @param {Number} choiceId                             - The choice ID.
+ * @param {CustomAttributeChoice} customAttributeChoice - The choice with updated values. 
+ * @returns {Promise<CustomAttributeChoice>}
+ */
+TDAPI.editCustomAttributeChoice = function(id, choiceId, customAttributeChoice) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.baseUrl}/attributes/${id}/${choiceId}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: customAttributeChoice || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets the custom attributes for the specified component.
+ * @param {Number} componentId        - The component ID.
+ * @param {Number} [associatedTypeId] - The associated type ID to get attributes for. For instance, a ticket type ID might be provided here.
+ * @param {Number} [appId]            - The associated application ID to get attributes for.
+ * @returns {Promise<CustomAttribute[]>}
+ */
+TDAPI.getCustomAttributes = function(componentId, associatedTypeId, appId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/attributes/custom?` +
+                `componentId=${componentId}` +
+                `&associatedTypeId=${associatedTypeId || 0}` +
+                `&appId=${appId || 0}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
 
 // TDAPI.prototype.addAttachment = function(appId, ticketId, attachment) {
 //   return new Promise((resolve, reject) => {
