@@ -58,7 +58,7 @@ function Asset(client, properties) {
 
 Asset.prototype.init = function(properties) {
   for(var property in properties) {
-    if(validUserAttributes.indexOf(property) > -1) {
+    if(validAssetAttributes.indexOf(property) > -1) {
       this[property] = properties[property];
     }
   }
@@ -255,3 +255,5 @@ validAssetAttributes = [
   "Attachments",
   "Uri"
 ];
+
+module.exports = Asset;
