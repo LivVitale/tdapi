@@ -900,6 +900,41 @@ TDAPI.prototype.getAssets = function(searchParams) {
     .catch(handleError);
 };
 
+
+/**
+ * Gets a list of active vendors.
+ * @returns {Promise<Vendor[]>}
+ */
+TDAPI.prototype.getVendors = function() {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/assets/vendors`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets a list of active product models.
+ * @returns {Promise<ProductModel[]>}
+ */
+TDAPI.prototype.getProductModels = function() {
+  return this.login()
+  .then(bearerToken => {
+    return request({
+      method: 'GET',
+      url: `${this.baseUrl}/assets/models`,
+      auth: { bearer: bearerToken },
+      json: true
+    });
+  })
+  .catch(handleError);
+};
+
 /**
  * Gets the choices for the specified custom attribute.
  * @param {Number} id - The ID of the custom attribute. 
