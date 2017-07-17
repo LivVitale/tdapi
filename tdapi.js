@@ -310,7 +310,7 @@ TDAPI.prototype.patchTicket = function(appId, ticketId, patch, notifyNewResponsi
     .then(bearerToken => {
       return request({
         method: 'PATCH',
-        url: `$this.baseUrl/${appId}/tickets/${ticketId}?notifyNewResponsible=${notifyNewResponsible || false}`,
+        url: `${this.baseUrl}/${appId}/tickets/${ticketId}?notifyNewResponsible=${notifyNewResponsible || false}`,
         auth: { bearer: bearerToken },
         json: true,
         body: patch
