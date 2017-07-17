@@ -228,6 +228,7 @@ validAssetAttributes = [
   "LocationRoomName",
   "Tag",
   "SerialNumber",
+  "Name",
   "PurchaseCost",
   "AcquisitionDate",
   "ExpectedReplacementDate",
