@@ -1036,6 +1036,64 @@ TDAPI.getCustomAttributes = function(componentId, associatedTypeId, appId) {
     .catch(handleError);
 };
 
+/**
+ * Gets a list of all Report Builder reports visible to the user.
+ * @returns {Promise<ReportInfo[]>}
+ */
+TDAPI.prototype.getReports = function() {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/reports`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets information about a report, optionally including data.
+ * @param {Number}  id                   - The report ID.
+ * @param {Boolean} [withData]           - If true, will populate the returned report's collection of rows.
+ * @param {String}  [dataSortExpression] - The sorting expression to use for the report's data. Only applicable when data is being retrieved. When not provided, will fall back to the default used for the report.
+ * @returns {Promise<Report>}
+ */
+TDAPI.prototype.getReport = function(id, withData, dataSortExpression) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/reports/${id}?` +
+                `withData=${withData || false}` +
+                `&dataSortExpression=${dataSortExpression || ''}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets a list of all Report Builder reports visible to the user that match the provided search criteria.
+ * @param {Object} reportSearch - The searching parameters to use.
+ * @returns {Promise<ReportInfo>}
+ */
+TDAPI.prototype.searchReports = function(reportSearch) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/reports/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: reportSearch || {}
+      });
+    })
+    .catch(handleError);
+};
+
 // TDAPI.prototype.addAttachment = function(appId, ticketId, attachment) {
 //   return new Promise((resolve, reject) => {
 //     this.login()

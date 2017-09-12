@@ -1,6 +1,6 @@
 {
   "name": "tdapi",
-  "version": "0.8.5",
+  "version": "0.9.0",
   "description": "Work in-progress NodeJS API wrapper for TeamDynamix",
   "repository": {
     "type": "git",
