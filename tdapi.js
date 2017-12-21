@@ -401,6 +401,25 @@ TDAPI.prototype.getAccounts = function() {
 };
 
 /**
+ * Gets the account specified by the account ID.
+ * @param {Number} id - The ID of the account.
+ * @returns {Promise<Account>} account
+ */
+TDAPI.prototype.getAccount = function(id) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/accounts/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .then(account => new Account(this, account))
+    .catch(handleError);
+};
+
+/**
  * Creates a new account.
  * @param {Account} account - The account to be created.
  * @returns {Promise<Account>} account
