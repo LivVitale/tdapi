@@ -38,9 +38,7 @@ function Account(client, properties) {
 
 Account.prototype.init = function(properties) {
   for(var property in properties) {
-    if(validAccountAttributes.indexOf(property) > -1) {
-      this[property] = properties[property];
-    }
+    this[property] = properties[property];
   }
 };
 
@@ -66,30 +64,5 @@ Account.prototype.edit = function() {
 function handleError(err) {
   return Promise.reject(err);
 }
-
-validAccountAttributes = [
-  "ID",
-  "Name",
-  "IsActive",
-  "Address1",
-  "Address2",
-  "Address3",
-  "Address4",
-  "City",
-  "StateName",
-  "StateAbbr",
-  "PostalCode",
-  "Country",
-  "Phone",
-  "Fax",
-  "Url",
-  "Notes",
-  "CreatedDate",
-  "ModifiedDate",
-  "Code",
-  "IndustryID",
-  "IndustryName",
-  "Domain"
-];
 
 module.exports = Account;
