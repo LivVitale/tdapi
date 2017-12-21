@@ -86,9 +86,7 @@ function User(client, properties) {
 
 User.prototype.init = function(properties) {
   for(var property in properties) {
-    if(validUserAttributes.indexOf(property) > -1) {
-      this[property] = properties[property];
-    }
+    this[property] = properties[property];
   }
 };
 
@@ -252,82 +250,5 @@ User.prototype.getTickets = function(appId, searchParams) {
 function handleError(err) {
   return Promise.reject(err);
 }
-
-validUserAttributes = [
-  "UID",
-  "BEID",
-  "BEIDInt",
-  "IsActive",
-  "UserName",
-  "FullName",
-  "FirstName",
-  "LastName",
-  "MiddleName",
-  "Birthday",
-  "Salutation",
-  "Nickname",
-  "DefaultAccountID",
-  "DefaultAccountName",
-  "PrimaryEmail",
-  "AlternateEmail",
-  "ExternalID",
-  "AlternateID",
-  "Applications",
-  "SecurityRoleName",
-  "SecurityRoleID",
-  "Permissions",
-  "OrgApplications",
-  "GroupIDs",
-  "ReferenceID",
-  "AlertEmail",
-  "ProfileImageFileName",
-  "Company",
-  "Title",
-  "HomePhone",
-  "PrimaryPhone",
-  "WorkPhone",
-  "Pager",
-  "OtherPhone",
-  "MobilePhone",
-  "Fax",
-  "DefaultPriorityID",
-  "DefaultPriorityName",
-  "AboutMe",
-  "WorkAddress",
-  "WorkCity",
-  "WorkState",
-  "WorkZip",
-  "WorkCountry",
-  "HomeAddress",
-  "HomeCity",
-  "HomeState",
-  "HomeZip",
-  "HomeCountry",
-  "DefaultRate",
-  "CostRate",
-  "IsEmployee",
-  "WorkableHours",
-  "IsCapacityManaged",
-  "ReportTimeAfterDate",
-  "EndDate",
-  "ShouldReportTime",
-  "ReportsToUID",
-  "ReportsToFullName",
-  "ResourcePoolID",
-  "ResourcePoolName",
-  "TZID",
-  "TZName",
-  "TypeID",
-  "AuthenticationUserName",
-  "AuthenticationProviderID",
-  "Attributes",
-  "Gender",
-  "IMProvider",
-  "IMHandle",
-  "IsPrimaryGroup",
-  "IsGroupManager",
-  "IsGroupNotified",
-  "AddedToGroupDate"
-];
 
 module.exports = User;
