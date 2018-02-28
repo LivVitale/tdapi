@@ -174,7 +174,7 @@ Ticket.prototype.getContacts = function() {
       return request({
         method: 'GET',
         url: `${this.client.baseUrl}/${this.AppID}/tickets/${this.ID}/contacts`,
-        auth: { bearere: bearerToken },
+        auth: { bearer: bearerToken },
         json: true
       });
     })
