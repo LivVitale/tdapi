@@ -58,9 +58,7 @@ function Asset(client, properties) {
 
 Asset.prototype.init = function(properties) {
   for(var property in properties) {
-    if(validAssetAttributes.indexOf(property) > -1) {
-      this[property] = properties[property];
-    }
+    this[property] = properties[property];
   }
 };
 
@@ -211,50 +209,5 @@ Asset.prototype.addResource = function(resourceId) {
 function handleError(err) {
   return Promise.reject(err);
 }
-
-validAssetAttributes = [
-  "ID",
-  "ProductModelID",
-  "ProductModelName",
-  "ManufacturerID",
-  "ManufacturerName",
-  "SupplierID",
-  "SupplierName",
-  "StatusID",
-  "StatusName",
-  "LocationID",
-  "LocationName",
-  "LocationRoomID",
-  "LocationRoomName",
-  "Tag",
-  "SerialNumber",
-  "Name",
-  "PurchaseCost",
-  "AcquisitionDate",
-  "ExpectedReplacementDate",
-  "RequestingCustomerID",
-  "RequestingCustomerName",
-  "RequestingDepartmentID",
-  "RequestingDepartmentName",
-  "OwningCustomerID",
-  "OwningCustomerName",
-  "OwningDepartmentID",
-  "OwningDepartmentName",
-  "ParentID",
-  "ParentSerialNumber",
-  "ParentTag",
-  "MaintenanceScheduleID",
-  "MaintenanceScheduleName",
-  "ConfigurationItemID",
-  "CreatedDate",
-  "CreatedUid",
-  "CreatedFullName",
-  "ModifiedDate",
-  "ModifiedFullName",
-  "ExternalID",
-  "Attributes",
-  "Attachments",
-  "Uri"
-];
 
 module.exports = Asset;

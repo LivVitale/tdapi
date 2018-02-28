@@ -39,9 +39,7 @@ function Location(client, properties) {
 
 Location.prototype.init = function(properties) {
   for(var property in properties) {
-    if(validAttributes.indexOf(property) > -1) {
-      this[property] = properties[property];
-    }
+    this[property] = properties[property];
   }
 };
 
@@ -122,31 +120,5 @@ Location.prototype.editRoom = function(roomId) {
 function handleError(err) {
   return Promise.reject(err);
 }
-
-validLocationAttributes = [
-  "ID",
-  "Name",
-  "Description",
-  "ExternalID",
-  "IsActive",
-  "Address",
-  "City",
-  "State",
-  "PostalCode",
-  "Country",
-  "IsRoomRequired",
-  "AssetsCount",
-  "TicketsCount",
-  "RoomsCount",
-  "Rooms",
-  "CreatedDate",
-  "CreatedUid",
-  "CreatedFullName",
-  "ModifiedDate",
-  "ModifiedUid",
-  "ModifiedFullName",
-  "Latitude",
-  "Longitude"
-];
 
 module.exports = Location;
