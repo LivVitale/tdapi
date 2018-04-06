@@ -406,3 +406,11 @@
  * @property {Boolean} AutoAssignResponsibility - A value indicating whether the ticket's responsibility should be auto-assigned based on the type.
  * @property {Boolean} AllowRequestorCreation   - A value indicating whether a requestor should be created if an existing person with machine information cannot be found.
  */
+
+/**
+ * A set of parameters designed to allow for setting the membership of users in Applications. 
+ * @typedef {Object}  UserApplicationsBulkManagementParameters 
+ * @property 	{IEnumerable(Of Guid)} UserUids 	- Gets or sets the user UIDs to add to the applications provided in Application Names. 
+ * @property 	{IEnumerable(Of String)} ApplicationNames 	- Gets or sets the application names to add the users provided in userUIDs to. 
+ * @property 	{Boolean} ReplaceExistingApplications 	- Gets or sets a value indicating whether applications that provided users already belong to should be removed.
+ */

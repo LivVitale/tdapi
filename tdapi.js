@@ -216,6 +216,27 @@ TDAPI.prototype.getGroupMembers = function(groupId) {
 };
 
 /**
+ * Bulk-adds or removes a set of users to a set of applications. 
+ * @param {Object} bulkParameters  - Contains set of User IDs, Applications, and remove flags.
+ * @returns {Promise<Application>} application
+ */
+TDAPI.prototype.changeApplications = function(bulkParameters) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/people/bulk/changeapplications`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: { 
+          UserUids: userUids || [], 
+          ApplicationNames: applicationNames || [], 
+          ReplaceExistingApplications: replaceExistingApplications || false }
+      });
+    })
+};
+
+/**
  * Creates a Ticket.
  * @param {Number} appId                - The ID of the ticketing application.
  * @param {any} ticket                  - The ticket body
