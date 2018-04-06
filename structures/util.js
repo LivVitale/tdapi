@@ -409,8 +409,24 @@
 
 /**
  * A set of parameters designed to allow for setting the membership of users in Applications. 
- * @typedef {Object}  UserApplicationsBulkManagementParameters 
- * @property 	{IEnumerable(Of Guid)} UserUids 	- Gets or sets the user UIDs to add to the applications provided in Application Names. 
- * @property 	{IEnumerable(Of String)} ApplicationNames 	- Gets or sets the application names to add the users provided in userUIDs to. 
+ * @typedef   {Object}  UserApplicationsBulkManagementParameters 
+ * @property 	{IEnumerable<Guid>} UserUids 	          - Gets or sets the user UIDs to add to the applications provided in Application Names.
+ * @property 	{IEnumerable<String>)} ApplicationNames - Gets or sets the application names to add the users provided in userUIDs to.
  * @property 	{Boolean} ReplaceExistingApplications 	- Gets or sets a value indicating whether applications that provided users already belong to should be removed.
+ */
+
+/**
+ * A set of parameters designed to allow for setting the membership of users in Groups. 
+ * @typedef   {Object}  UserGroupsBulkManagementParameters  
+ * @property 	{IEnumerable<Guid>)} UserUIDs 	  - Gets or sets the collection of user UIDs to add to the groups provided in GroupIDs.
+ * @property 	{IEnumerable<Int32>} GroupIDs 	  - Gets or sets the collection of group IDs that users provided in UserUIDs will be added to.
+ * @property 	{Boolean} RemoveOtherGroups 	    - Gets or sets a value indicating whether groups that provided users already belong to should be removed.
+ */
+
+/**
+ * A set of parameters designed to allow for setting the membership of users in Accounts. 
+ * @typedef   {Object}  UserAccountsBulkManagementParameters
+ * @property 	{IEnumerable<Guid>)} UserUids 	  - Gets or sets the collection of user UIDs to add to the groups provided in GroupIDs.
+ * @property 	{IEnumerable<Int32>} AccountIDs 	- Gets or sets the collection of group IDs that users provided in UserUIDs will be added to.
+ * @property 	{Boolean} ReplaceExistingAccounts - Gets or sets a value indicating whether groups that provided users already belong to should be removed.
  */
