@@ -219,14 +219,14 @@ TDAPI.prototype.getGroupMembers = function(groupId) {
  * Bulk-applies a desktop template to a set of users.  
  * @param {Guid} templateDesktopId  - The ID of the desktop template to apply. 
  * @param {IEnumerable<Guid>} uids  - The UIDs of the users to apply the desktop to. 
- * @param {Boolean} isActive        - If set to true, each of the specified users will be set to be active. 
+ * @param {Boolean} isDefault        - If set to true, each of the specified users will be set to be active. 
  */
 TDAPI.prototype.applyDesktop = function(templateDesktopId, uids, isDefault) {
   return this.login()
     .then(bearerToken => {
       return request({
         method: 'POST',
-        url: `${this.baseUrl}/people/bulk/applydesktop/${templateDesktopId}?isDefault=${isActive}`,
+        url: `${this.baseUrl}/people/bulk/applydesktop/${templateDesktopId}?isDefault=${isDefault}`,
         auth: { bearer: bearerToken },
         json: true,
         body: uids || []
