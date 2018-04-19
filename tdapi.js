@@ -218,15 +218,15 @@ TDAPI.prototype.getGroupMembers = function(groupId) {
 /**
  * Bulk-applies a desktop template to a set of users.  
  * @param {Guid} templateDesktopId  - The ID of the desktop template to apply. 
- * @param {IEnumerable<Guid>} uids  - The UIDs of the users to apply the desktop to. 
- * @param {Boolean} isDefault        - If set to true, each of the specified users will be set to be active. 
+ * @param {Guid[]} uids             -The UIDs of the users to apply the desktop to. 
+ * @param {Boolean} [isDefault=false]       - If set to true, each of the specified users will be set to be active. 
  */
 TDAPI.prototype.applyDesktop = function(templateDesktopId, uids, isDefault) {
   return this.login()
     .then(bearerToken => {
       return request({
         method: 'POST',
-        url: `${this.baseUrl}/people/bulk/applydesktop/${templateDesktopId}?isDefault=${isDefault}`,
+        url: `${this.baseUrl}/people/bulk/applydesktop/${templateDesktopId}?isDefault=${isDefault || false}`,
         auth: { bearer: bearerToken },
         json: true,
         body: uids || []
@@ -236,7 +236,7 @@ TDAPI.prototype.applyDesktop = function(templateDesktopId, uids, isDefault) {
 
 /**
  * Bulk-updates the active status of the set of users.  
- * @param {IEnumerable<Guid>} uids  - The UIDs of the people to update the active status of. 
+ * @param {Guid} uids  - The UIDs of the people to update the active status of. 
  * @param {Boolean} isActive        - If set to true, each of the specified users will be set to be active. 
  */
 TDAPI.prototype.changeActiveStatus = function(uids, isActive) {
@@ -244,7 +244,7 @@ TDAPI.prototype.changeActiveStatus = function(uids, isActive) {
     .then(bearerToken => {
       return request({
         method: 'POST',
-        url: `${this.baseUrl}/people/bulk/changeactivestatus?isActive=${isActive}`,
+        url: `${this.baseUrl}/people/bulk/changeactivestatus?isActive=${isActive || false}`,
         auth: { bearer: bearerToken },
         json: true,
         body: uids || []
@@ -254,8 +254,8 @@ TDAPI.prototype.changeActiveStatus = function(uids, isActive) {
 
 /**
  * Bulk-adds or removes a set of users to a set of applications. Optionally, supports removing any application associations for users. 
- * @param {IEnumerable<Guid>} userUids            - The UIDs of the people being added to entries in applicationsNames.
- * @param {IEnumerable<String>} applicationNames  - The Applications that will be added to each entry in userUids.
+ * @param {Guid[]} userUids            - The UIDs of the people being added to entries in applicationsNames.
+ * @param {String[]} applicationNames  - The Applications that will be added to each entry in userUids.
  * @param {Boolean} replaceExistingApplications   - Value indicating whether applications that provided users already belong to should be removed.
  */
 TDAPI.prototype.changeApplications = function(userUids, applicationNames, replaceExistingApplications) {
@@ -276,8 +276,8 @@ TDAPI.prototype.changeApplications = function(userUids, applicationNames, replac
 
 /**
  * Bulk-adds a set of users to a set of groups. Optionally, supports removing any memberships for those users that are outside of those groups. 
- * @param {IEnumerable<Guid>} userUids  - The UIDs of the people being added to entries in groupIds.
- * @param {IEnumerable<Int32>} groupIds - The groups that will be added to each entry in userUids.
+ * @param {Guid[]} userUids  - The UIDs of the people being added to entries in groupIds.
+ * @param {Int32[]} groupIds - The groups that will be added to each entry in userUids.
  * @param {Boolean} removeOtherGroups   - Value indicating whether groups that provided users already belong to should be removed.
  */
 TDAPI.prototype.manageGroups = function(userUids, groupIds, removeOtherGroups) {
@@ -298,8 +298,8 @@ TDAPI.prototype.manageGroups = function(userUids, groupIds, removeOtherGroups) {
 
 /**
  * Bulk-adds a set of users to a set of accounts. Optionally, supports removing any accounts for the specified users that are not included in the set of accounts. 
- * @param {IEnumerable<Guid>} userUids      - The user UIDs to add to the accounts provided in AccountIDs 
- * @param {IEnumerable<Int32>} accountIds   - The account IDs to add the users provided in userUIDs to. 
+ * @param {Guid[]} userUids      - The user UIDs to add to the accounts provided in AccountIDs 
+ * @param {Int32[]} accountIds   - The account IDs to add the users provided in userUIDs to. 
  * @param {Boolean} replaceExistingAccounts - Value indicating whether accounts that provided users already belong to should be removed. 
  */
 TDAPI.prototype.changeAcctDepts = function(userUids, accountIds, replaceExistingAccounts) {
@@ -321,7 +321,7 @@ TDAPI.prototype.changeAcctDepts = function(userUids, accountIds, replaceExisting
 /**
  * Bulk-changes the security role of a set of users.  
  * @param {Guid} securityRoleId     - The ID of the security role to apply to each user. 
- * @param {IEnumerable<Guid>} uids  - The groups that will be added to each entry in userUids.
+ * @param {Guid[]} uids  - The groups that will be added to each entry in userUids.
  */
 TDAPI.prototype.changeSecurityRole = function(securityRoleId,uids) {
   return this.login()

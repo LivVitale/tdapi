@@ -418,7 +418,7 @@
 /**
  * A set of parameters designed to allow for setting the membership of users in Groups. 
  * @typedef   {Object}  UserGroupsBulkManagementParameters  
- * @property 	{Guid[]} UserUIDs 	        - Gets or sets the collection of user UIDs to add to the groups provided in GroupIDs.
+ * @property 	{Guid[]}  UserUIDs 	        - Gets or sets the collection of user UIDs to add to the groups provided in GroupIDs.
  * @property 	{Int32[]} GroupIDs 	        - Gets or sets the collection of group IDs that users provided in UserUIDs will be added to.
  * @property 	{Boolean} RemoveOtherGroups - Gets or sets a value indicating whether groups that provided users already belong to should be removed.
  */
