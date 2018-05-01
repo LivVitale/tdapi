@@ -176,8 +176,8 @@ User.prototype.addGroup = function(groupId, isPrimary, isNotified, isManager) {
         method: 'PUT',
         url: `${this.client.baseUrl}/people/${this.UID}/groups/${groupId}` + 
               `?isPrimary=${isPrimary || false}` +
-              `?isNotified=${isNotified || false}` +
-              `?isManager=${isManager || false}`,
+              `&isNotified=${isNotified || false}` +
+              `&isManager=${isManager || false}`,
         auth: { bearer: bearerToken },
         json: true
       });

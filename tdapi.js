@@ -145,7 +145,7 @@ TDAPI.prototype.getSecurityRole = function(roleId) {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/securityroles/${roleId}`,
-        auth: { bearer: bearerToken },
+        auth: { bearer: bearerToken }, 
         json: true
       });
     })
@@ -292,6 +292,29 @@ TDAPI.prototype.manageGroups = function(userUids, groupIds, removeOtherGroups) {
           UserUIDs: userUids || [], 
           GroupIDs: groupIds || [], 
           RemoveOtherGroups: removeOtherGroups || false }
+      });
+    })
+};
+
+/**
+ * Bulk-adds a set of users to a group.Adds a collection of users to a group. 
+ * Users that did not exist in the group beforehand will have their settings set to the specified values. 
+ * Existing users will not have their settings overwritten. 
+ * @param {Boolean} id    - ID of the group 
+ * @param {Guid[]}  uids   - The UIDs of the people being added to entries in groupIds.
+ * @param {Boolean} [isPrimary=false] - If set to true, new users will have this group set as their primary group. 
+ * @param {Boolean} [isNotified=false] - If set to true, new users will be sent notifications for this group. 
+ * @param {Boolean} [isManager=false] - If set to true, new users will be set as a manager for this group. 
+ */
+TDAPI.prototype.addUsersToGroup = function(id,uids,isPrimary, isNotified, isManager) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/groups/${id}/members?isPrimary=${isPrimary}&isNotified=${isNotified}&isManager=${isManager}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: uids || []
       });
     })
 };
@@ -1070,6 +1093,42 @@ TDAPI.prototype.getProductModels = function() {
       url: `${this.baseUrl}/assets/models`,
       auth: { bearer: bearerToken },
       json: true
+    });
+  })
+  .catch(handleError);
+};
+
+/**
+ * Gets a list of active product models.
+ * @param {Number} id
+ * @returns {Promise<ProductModel>}
+ */
+TDAPI.prototype.getProductModel = function(id) {
+  return this.login()
+  .then(bearerToken => {
+    return request({
+      method: 'GET',
+      url: `${this.baseUrl}/assets/models/${id}`,
+      auth: { bearer: bearerToken },
+      json: true
+    });
+  })
+  .catch(handleError);
+};
+
+/**
+ * edits a product model.
+ * @param {ProductModel} productModel
+ */
+TDAPI.prototype.editProductModel = function(productModel) {
+  return this.login()
+  .then(bearerToken => {
+    return request({
+      method: 'PUT',
+      url: `${this.baseUrl}/assets/models/${productModel.ID}`,
+      auth: { bearer: bearerToken },
+      json: true,
+      body: productModel || {}
     });
   })
   .catch(handleError);
