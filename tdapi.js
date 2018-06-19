@@ -1099,7 +1099,7 @@ TDAPI.prototype.getProductModels = function() {
 };
 
 /**
- * Gets a list of active product models.
+ * Gets the specified product model. 
  * @param {Number} id
  * @returns {Promise<ProductModel>}
  */
