@@ -1293,6 +1293,60 @@ TDAPI.prototype.searchReports = function(reportSearch) {
     .catch(handleError);
 };
 
+/**
+ * Gets an attachment.
+ * @param {Guid} id - The attachment ID.
+ * @returns {Attachment} - The attachment object, if found.
+ */
+TDAPI.prototype.getAttachment = function(id) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/attachments/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets the contents of an attachment.
+ * @param {Guid} id - The attachment ID.
+ * @returns {Promise<Object>} - The attachment's file contents, if found.
+ */
+TDAPI.prototype.getAttachmentContents = function(id) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/attachments/${id}/content`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Deletes an attachment.
+ * @param {Guid} id - The attachment ID.
+ * @returns {Promise<Object>} - A response message indicating if the operation was successful or not.
+ */
+TDAPI.prototype.deleteAttachment = function(id) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'DELETE',
+        url: `${this.baseUrl}/attachments/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
 // TDAPI.prototype.addAttachment = function(appId, ticketId, attachment) {
 //   return new Promise((resolve, reject) => {
 //     this.login()
