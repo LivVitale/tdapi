@@ -145,7 +145,7 @@ TDAPI.prototype.getSecurityRole = function(roleId) {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/securityroles/${roleId}`,
-        auth: { bearer: bearerToken },
+        auth: { bearer: bearerToken }, 
         json: true
       });
     })
@@ -172,9 +172,86 @@ TDAPI.prototype.getSecurityRoles = function(searchParams) {
 };
 
 /**
+ * Gets a Group.
+ * @param {Number} id  - The group ID.
+ * @returns {Promise<Group>} The group.
+ */
+TDAPI.prototype.getGroup = function(id) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/groups/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Creates a new group.
+ * @param {Group} group  - The group to be created.
+ * @returns {Promise<Group>} The group.
+ */
+TDAPI.prototype.createGroup = function(group) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/groups`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: group || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Edits an existing group.
+ * @param {Number} id  - The group ID.
+ * @param {Group} group  - The fields that the updated group should hold.
+ * @returns {Promise<Group>} The updated group, if the operation was successful.
+ */
+TDAPI.prototype.editGroup = function(id, group) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.baseUrl}/groups/${id}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: group || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Removes a collection of users from a group.
+ * @param {Number} id  - The group ID.
+ * @param {Guid[]} uids  - The search parameters to use.
+ * @returns {Promise<Object>} A response message indicating if the operation was successful or not.
+ */
+TDAPI.prototype.removeFromGroup = function(id, uids) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'DELETE',
+        url: `${this.baseUrl}/groups/${id}/members`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: uids || []
+      });
+    })
+    .catch(handleError);
+};
+
+/**
  * Gets Groups.
  * @param {GroupSearch} [searchParams={}]  - The search parameters to use.
- * @returns {Promise<Group[]>} groups
+ * @returns {Promise<Group[]>} A collection of groups. 
  */
 TDAPI.prototype.getGroups = function(searchParams) {
   return this.login()
@@ -277,7 +354,7 @@ TDAPI.prototype.changeApplications = function(userUids, applicationNames, replac
 /**
  * Bulk-adds a set of users to a set of groups. Optionally, supports removing any memberships for those users that are outside of those groups. 
  * @param {Guid[]} userUids  - The UIDs of the people being added to entries in groupIds.
- * @param {Int32[]} groupIds - The groups that will be added to each entry in userUids.
+ * @param {Number[]} groupIds - The groups that will be added to each entry in userUids.
  * @param {Boolean} removeOtherGroups   - Value indicating whether groups that provided users already belong to should be removed.
  */
 TDAPI.prototype.manageGroups = function(userUids, groupIds, removeOtherGroups) {
@@ -297,9 +374,32 @@ TDAPI.prototype.manageGroups = function(userUids, groupIds, removeOtherGroups) {
 };
 
 /**
+ * Bulk-adds a set of users to a group. Adds a collection of users to a group. 
+ * Users that did not exist in the group beforehand will have their settings set to the specified values. 
+ * Existing users will not have their settings overwritten. 
+ * @param {Boolean} id    - ID of the group 
+ * @param {Guid[]}  uids   - The UIDs of the people being added to entries in groupIds.
+ * @param {Boolean} [isPrimary=false] - If set to true, new users will have this group set as their primary group. 
+ * @param {Boolean} [isNotified=false] - If set to true, new users will be sent notifications for this group. 
+ * @param {Boolean} [isManager=false] - If set to true, new users will be set as a manager for this group. 
+ */
+TDAPI.prototype.addUsersToGroup = function(id,uids,isPrimary, isNotified, isManager) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/groups/${id}/members?isPrimary=${isPrimary}&isNotified=${isNotified}&isManager=${isManager}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: uids || []
+      });
+    })
+};
+
+/**
  * Bulk-adds a set of users to a set of accounts. Optionally, supports removing any accounts for the specified users that are not included in the set of accounts. 
  * @param {Guid[]} userUids      - The user UIDs to add to the accounts provided in AccountIDs 
- * @param {Int32[]} accountIds   - The account IDs to add the users provided in userUIDs to. 
+ * @param {Number[]} accountIds   - The account IDs to add the users provided in userUIDs to. 
  * @param {Boolean} replaceExistingAccounts - Value indicating whether accounts that provided users already belong to should be removed. 
  */
 TDAPI.prototype.changeAcctDepts = function(userUids, accountIds, replaceExistingAccounts) {
@@ -1076,6 +1176,42 @@ TDAPI.prototype.getProductModels = function() {
 };
 
 /**
+ * Gets the specified product model. 
+ * @param {Number} id
+ * @returns {Promise<ProductModel>}
+ */
+TDAPI.prototype.getProductModel = function(id) {
+  return this.login()
+  .then(bearerToken => {
+    return request({
+      method: 'GET',
+      url: `${this.baseUrl}/assets/models/${id}`,
+      auth: { bearer: bearerToken },
+      json: true
+    });
+  })
+  .catch(handleError);
+};
+
+/**
+ * edits a product model.
+ * @param {ProductModel} productModel
+ */
+TDAPI.prototype.editProductModel = function(productModel) {
+  return this.login()
+  .then(bearerToken => {
+    return request({
+      method: 'PUT',
+      url: `${this.baseUrl}/assets/models/${productModel.ID}`,
+      auth: { bearer: bearerToken },
+      json: true,
+      body: productModel || {}
+    });
+  })
+  .catch(handleError);
+};
+
+/**
  * Gets the choices for the specified custom attribute.
  * @param {Number} id - The ID of the custom attribute. 
  * @returns {Promise<CustomAttributeChoice[]>}
@@ -1229,6 +1365,60 @@ TDAPI.prototype.searchReports = function(reportSearch) {
         auth: { bearer: bearerToken },
         json: true,
         body: reportSearch || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets an attachment.
+ * @param {Guid} id - The attachment ID.
+ * @returns {Attachment} - The attachment object, if found.
+ */
+TDAPI.prototype.getAttachment = function(id) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/attachments/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets the contents of an attachment.
+ * @param {Guid} id - The attachment ID.
+ * @returns {Promise<Object>} - The attachment's file contents, if found.
+ */
+TDAPI.prototype.getAttachmentContents = function(id) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/attachments/${id}/content`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Deletes an attachment.
+ * @param {Guid} id - The attachment ID.
+ * @returns {Promise<Object>} - A response message indicating if the operation was successful or not.
+ */
+TDAPI.prototype.deleteAttachment = function(id) {
+  return this.login()
+     .then(bearerToken => {
+      return request({
+        method: 'DELETE',
+        url: `${this.baseUrl}/attachments/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
       });
     })
     .catch(handleError);
