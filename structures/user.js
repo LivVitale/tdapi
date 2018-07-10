@@ -128,8 +128,8 @@ User.prototype.getFunctionalRoles = function() {
 
 /**
  * Deletes a functional role from the User account
- * @param {any} roleId
- * @returns {Promise<Object>} message
+ * @param {Number} roleId The functional role ID.
+ * @returns {Promise<Object>} A response message indicating if the operation was successful or not.
  */
 User.prototype.deleteFunctionalRole = function(roleId) {
   return this.client.login()
@@ -137,6 +137,25 @@ User.prototype.deleteFunctionalRole = function(roleId) {
       return request({
         method: 'DELETE',
         url: `${this.client.baseUrl}/people/${this.UID}/functionalroles/${roleId}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Adds the user to functional role if they are not already in that role. If they are in that role, this will update whether or not that role is the user's primary functional role.
+ * @param {Number} roleId The functional role ID.
+ * @param {Boolean} isPrimary The functional role ID.
+ * @returns {Promise<Object>} A response message indicating if the operation was successful or not.
+ */
+User.prototype.addFunctionalRole = function(roleId, isPrimary) {
+  return this.client.login()
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.client.baseUrl}/people/${this.UID}/functionalroles/${roleId}?isPrimary=${isPrimary}`,
         auth: { bearer: bearerToken },
         json: true
       });
