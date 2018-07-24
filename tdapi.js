@@ -1157,6 +1157,61 @@ TDAPI.prototype.getVendors = function() {
     })
     .catch(handleError);
 };
+/**
+ * Gets a list of vendors.
+ * @param {VendorSearch} query - The searching parameters to use 
+ * @returns {Promise<Vendor[]>}
+ */
+TDAPI.prototype.searchVendors = function(query) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets/vendors/search`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: query || {}
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Gets a vendor.
+ * @param {Number} id - The vendor ID.
+ * @returns {Promise<Vendor>}
+ */
+TDAPI.prototype.getVendor = function(id) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/assets/vendors/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+};
+
+/**
+ * Creates a new vendor.
+ * @param {Vendor} vendor - The vendor to be created.
+ * @returns {Promise<Vendor>}
+ */
+TDAPI.prototype.createVendor = function(vendor) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets/vendors`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: vendor || {}
+      });
+    })
+    .catch(handleError);
+};
 
 /**
  * Gets a list of active product models.
@@ -1194,15 +1249,35 @@ TDAPI.prototype.getProductModel = function(id) {
 };
 
 /**
- * edits a product model.
+ * Creates a new product model.
  * @param {ProductModel} productModel
+ * @returns {ProductModel} - The new Product Model.
  */
-TDAPI.prototype.editProductModel = function(productModel) {
+TDAPI.prototype.createProductModel = function(productModel) {
+  return this.login()
+  .then(bearerToken => {
+    return request({
+      method: 'POST',
+      url: `${this.baseUrl}/assets/models`,
+      auth: { bearer: bearerToken },
+      json: true,
+      body: productModel || {}
+    });
+  })
+  .catch(handleError);
+};
+
+/**
+ * edits a product model.
+ * @param {id} id - The product model id
+ * @returns {ProductModel} - The updated Product Model.
+ */
+TDAPI.prototype.editProductModel = function(id) {
   return this.login()
   .then(bearerToken => {
     return request({
       method: 'PUT',
-      url: `${this.baseUrl}/assets/models/${productModel.ID}`,
+      url: `${this.baseUrl}/assets/models/${id}`,
       auth: { bearer: bearerToken },
       json: true,
       body: productModel || {}
