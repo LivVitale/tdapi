@@ -1042,9 +1042,9 @@ TDAPI.prototype.addAssetToTicket = function (id, ticketId) {
 };
 
 /**
- * Get assets associated with a ticket
- * The endpoint also returns additional configuration items
- * @param {Number} [appId]  - The associated application ID to get attributes for.
+ * Get assets associated with a ticket.
+ * The endpoint also returns additional configuration items.
+ * @param {Number} appId  - The associated application ID to get attributes for.
  * @param {Number} ticketId - The ticket ID. This must belong to an application that the user can access.
  * @returns {Promise<Object>} message
  */
