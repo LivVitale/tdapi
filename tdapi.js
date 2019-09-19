@@ -18,9 +18,9 @@ var Asset = require('./structures/asset');
  * @param {TDAPIOptions} options - The options to configure the TDAPI client with.
  */
 function TDAPI(options) {
-    this.credentials = options.credentials || { UserName: '', Password: ''};
-    this.baseUrl = options.baseUrl || 'https://api.teamdynamix.com/TDWebAPI/api';
-    this.bearerToken = '';
+  this.credentials = options.credentials || { UserName: '', Password: '' };
+  this.baseUrl = options.baseUrl || 'https://api.teamdynamix.com/TDWebAPI/api';
+  this.bearerToken = '';
 }
 
 /**
@@ -46,9 +46,9 @@ function TDAPI(options) {
  * Gets a Bearer Token for authenticating other requests.
  * @returns {Promise<String>}
  */
-TDAPI.prototype.login = function() {
+TDAPI.prototype.login = function () {
   return new Promise((resolve, reject) => {
-    if(this.bearerToken && !tokenExpired(this.bearerToken)) {
+    if (this.bearerToken && !tokenExpired(this.bearerToken)) {
       resolve(this.bearerToken);
     } else {
       var options = {
@@ -73,7 +73,7 @@ TDAPI.prototype.login = function() {
  * @param {Guid} uid  - The UID of the user.
  * @returns {Promise<User>}
  */
-TDAPI.prototype.getUser = function(uid) {
+TDAPI.prototype.getUser = function (uid) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -92,7 +92,7 @@ TDAPI.prototype.getUser = function(uid) {
  * @param {UserSearch} searchParams  - The search parameters to use.
  * @returns {Promise<User[]>}
  */
-TDAPI.prototype.getUsers = function(searchParams) {
+TDAPI.prototype.getUsers = function (searchParams) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -104,7 +104,7 @@ TDAPI.prototype.getUsers = function(searchParams) {
       });
     })
     .then(users => {
-      if(Array.isArray(users)) {
+      if (Array.isArray(users)) {
         return users.map(user => new User(this, user));
       } else {
         return users;
@@ -118,7 +118,7 @@ TDAPI.prototype.getUsers = function(searchParams) {
  * @param {User} user  - The user to create.
  * @returns {Promise<User>}
  */
-TDAPI.prototype.createUser = function(user) {
+TDAPI.prototype.createUser = function (user) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -138,13 +138,13 @@ TDAPI.prototype.createUser = function(user) {
  * @param {Guid} roleId  - The ID of the security role.
  * @returns {Promise<SecurityRole>} securityRole
  */
-TDAPI.prototype.getSecurityRole = function(roleId) {
+TDAPI.prototype.getSecurityRole = function (roleId) {
   return this.login()
     .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/securityroles/${roleId}`,
-        auth: { bearer: bearerToken }, 
+        auth: { bearer: bearerToken },
         json: true
       });
     })
@@ -156,7 +156,7 @@ TDAPI.prototype.getSecurityRole = function(roleId) {
  * @param {SecurityRoleSearch} searchParams  - The search parameters to use.
  * @returns {Promise<SecurityRole[]>} securityRoles
  */
-TDAPI.prototype.getSecurityRoles = function(searchParams) {
+TDAPI.prototype.getSecurityRoles = function (searchParams) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -175,7 +175,7 @@ TDAPI.prototype.getSecurityRoles = function(searchParams) {
  * @param {Number} id  - The group ID.
  * @returns {Promise<Group>} The group.
  */
-TDAPI.prototype.getGroup = function(id) {
+TDAPI.prototype.getGroup = function (id) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -193,7 +193,7 @@ TDAPI.prototype.getGroup = function(id) {
  * @param {Group} group  - The group to be created.
  * @returns {Promise<Group>} The group.
  */
-TDAPI.prototype.createGroup = function(group) {
+TDAPI.prototype.createGroup = function (group) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -213,7 +213,7 @@ TDAPI.prototype.createGroup = function(group) {
  * @param {Group} group  - The fields that the updated group should hold.
  * @returns {Promise<Group>} The updated group, if the operation was successful.
  */
-TDAPI.prototype.editGroup = function(id, group) {
+TDAPI.prototype.editGroup = function (id, group) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -233,7 +233,7 @@ TDAPI.prototype.editGroup = function(id, group) {
  * @param {Guid[]} uids  - The search parameters to use.
  * @returns {Promise<Object>} A response message indicating if the operation was successful or not.
  */
-TDAPI.prototype.removeFromGroup = function(id, uids) {
+TDAPI.prototype.removeFromGroup = function (id, uids) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -252,7 +252,7 @@ TDAPI.prototype.removeFromGroup = function(id, uids) {
  * @param {GroupSearch} [searchParams={}]  - The search parameters to use.
  * @returns {Promise<Group[]>} A collection of groups. 
  */
-TDAPI.prototype.getGroups = function(searchParams) {
+TDAPI.prototype.getGroups = function (searchParams) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -271,7 +271,7 @@ TDAPI.prototype.getGroups = function(searchParams) {
  * @param {Number} groupId  - The ID of the group.
  * @returns {Promise<User[]>} groupMembers
  */
-TDAPI.prototype.getGroupMembers = function(groupId) {
+TDAPI.prototype.getGroupMembers = function (groupId) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -282,7 +282,7 @@ TDAPI.prototype.getGroupMembers = function(groupId) {
       });
     })
     .then(users => {
-      if(Array.isArray(users)) {
+      if (Array.isArray(users)) {
         return users.map(user => new User(this, user));
       } else {
         return users;
@@ -297,7 +297,7 @@ TDAPI.prototype.getGroupMembers = function(groupId) {
  * @param {Guid[]} uids             -The UIDs of the users to apply the desktop to. 
  * @param {Boolean} [isDefault=false]       - If set to true, each of the specified users will be set to be active. 
  */
-TDAPI.prototype.applyDesktop = function(templateDesktopId, uids, isDefault) {
+TDAPI.prototype.applyDesktop = function (templateDesktopId, uids, isDefault) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -315,7 +315,7 @@ TDAPI.prototype.applyDesktop = function(templateDesktopId, uids, isDefault) {
  * @param {Guid} uids  - The UIDs of the people to update the active status of. 
  * @param {Boolean} isActive        - If set to true, each of the specified users will be set to be active. 
  */
-TDAPI.prototype.changeActiveStatus = function(uids, isActive) {
+TDAPI.prototype.changeActiveStatus = function (uids, isActive) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -334,7 +334,7 @@ TDAPI.prototype.changeActiveStatus = function(uids, isActive) {
  * @param {String[]} applicationNames  - The Applications that will be added to each entry in userUids.
  * @param {Boolean} replaceExistingApplications   - Value indicating whether applications that provided users already belong to should be removed.
  */
-TDAPI.prototype.changeApplications = function(userUids, applicationNames, replaceExistingApplications) {
+TDAPI.prototype.changeApplications = function (userUids, applicationNames, replaceExistingApplications) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -342,10 +342,11 @@ TDAPI.prototype.changeApplications = function(userUids, applicationNames, replac
         url: `${this.baseUrl}/people/bulk/changeapplications`,
         auth: { bearer: bearerToken },
         json: true,
-        body: { 
-          UserUids: userUids || [], 
-          ApplicationNames: applicationNames || [], 
-          ReplaceExistingApplications: replaceExistingApplications || false }
+        body: {
+          UserUids: userUids || [],
+          ApplicationNames: applicationNames || [],
+          ReplaceExistingApplications: replaceExistingApplications || false
+        }
       });
     })
 };
@@ -356,7 +357,7 @@ TDAPI.prototype.changeApplications = function(userUids, applicationNames, replac
  * @param {Number[]} groupIds - The groups that will be added to each entry in userUids.
  * @param {Boolean} removeOtherGroups   - Value indicating whether groups that provided users already belong to should be removed.
  */
-TDAPI.prototype.manageGroups = function(userUids, groupIds, removeOtherGroups) {
+TDAPI.prototype.manageGroups = function (userUids, groupIds, removeOtherGroups) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -364,10 +365,11 @@ TDAPI.prototype.manageGroups = function(userUids, groupIds, removeOtherGroups) {
         url: `${this.baseUrl}/people/bulk/managegroups`,
         auth: { bearer: bearerToken },
         json: true,
-        body: { 
-          UserUIDs: userUids || [], 
-          GroupIDs: groupIds || [], 
-          RemoveOtherGroups: removeOtherGroups || false }
+        body: {
+          UserUIDs: userUids || [],
+          GroupIDs: groupIds || [],
+          RemoveOtherGroups: removeOtherGroups || false
+        }
       });
     })
 };
@@ -382,7 +384,7 @@ TDAPI.prototype.manageGroups = function(userUids, groupIds, removeOtherGroups) {
  * @param {Boolean} [isNotified=false] - If set to true, new users will be sent notifications for this group. 
  * @param {Boolean} [isManager=false] - If set to true, new users will be set as a manager for this group. 
  */
-TDAPI.prototype.addUsersToGroup = function(id,uids,isPrimary, isNotified, isManager) {
+TDAPI.prototype.addUsersToGroup = function (id, uids, isPrimary, isNotified, isManager) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -401,7 +403,7 @@ TDAPI.prototype.addUsersToGroup = function(id,uids,isPrimary, isNotified, isMana
  * @param {Number[]} accountIds   - The account IDs to add the users provided in userUIDs to. 
  * @param {Boolean} replaceExistingAccounts - Value indicating whether accounts that provided users already belong to should be removed. 
  */
-TDAPI.prototype.changeAcctDepts = function(userUids, accountIds, replaceExistingAccounts) {
+TDAPI.prototype.changeAcctDepts = function (userUids, accountIds, replaceExistingAccounts) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -409,10 +411,11 @@ TDAPI.prototype.changeAcctDepts = function(userUids, accountIds, replaceExisting
         url: `${this.baseUrl}/people/bulk/changeacctdepts`,
         auth: { bearer: bearerToken },
         json: true,
-        body: { 
-          UserUids: userUids || [], 
-          AccountIDs: accountIds || [], 
-          ReplaceExistingAccounts: replaceExistingAccounts || false }
+        body: {
+          UserUids: userUids || [],
+          AccountIDs: accountIds || [],
+          ReplaceExistingAccounts: replaceExistingAccounts || false
+        }
       });
     })
 };
@@ -422,7 +425,7 @@ TDAPI.prototype.changeAcctDepts = function(userUids, accountIds, replaceExisting
  * @param {Guid} securityRoleId     - The ID of the security role to apply to each user. 
  * @param {Guid[]} uids  - The groups that will be added to each entry in userUids.
  */
-TDAPI.prototype.changeSecurityRole = function(securityRoleId,uids) {
+TDAPI.prototype.changeSecurityRole = function (securityRoleId, uids) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -441,10 +444,10 @@ TDAPI.prototype.changeSecurityRole = function(securityRoleId,uids) {
  * @param {any} ticket                  - The ticket body
  * @param {TicketCreateOptions} options - The creation options
  */
-TDAPI.prototype.createTicket = function(appId, ticket, options) {
+TDAPI.prototype.createTicket = function (appId, ticket, options) {
   return this.login()
     .then(bearerToken => {
-      if(!options) {
+      if (!options) {
         options = {
           EnableNotifyReviewer: false,
           NotifyRequestor: false,
@@ -456,11 +459,11 @@ TDAPI.prototype.createTicket = function(appId, ticket, options) {
       return request({
         method: 'POST',
         url: `${this.baseUrl}/${appId}/tickets?` +
-              `EnableNotifyReviewer=${options.EnableNotifyReviewer || false}` +
-              `&NotifyRequestor=${options.NotifyRequestor || false}` + 
-              `&NotifyResponsible=${options.NotifyResponsible || false}` +
-              `&AutoAssignResponsibility=${options.AutoAssignResponsibility || false}` +
-              `&AllowRequestorCreation=${options.AllowRequestorCreation || false}`,
+          `EnableNotifyReviewer=${options.EnableNotifyReviewer || false}` +
+          `&NotifyRequestor=${options.NotifyRequestor || false}` +
+          `&NotifyResponsible=${options.NotifyResponsible || false}` +
+          `&AutoAssignResponsibility=${options.AutoAssignResponsibility || false}` +
+          `&AllowRequestorCreation=${options.AllowRequestorCreation || false}`,
         auth: { bearer: bearerToken },
         json: true,
         body: ticket || {}
@@ -476,7 +479,7 @@ TDAPI.prototype.createTicket = function(appId, ticket, options) {
  * @param {Number} ticketId  - The ID of the ticket.
  * @returns {Promise<Ticket>} ticket
  */
-TDAPI.prototype.getTicket = function(appId, ticketId) {
+TDAPI.prototype.getTicket = function (appId, ticketId) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -496,7 +499,7 @@ TDAPI.prototype.getTicket = function(appId, ticketId) {
  * @param {TicketSearch} [searchParams={}]  - The search parameters to use.
  * @returns {Promise<Ticket[]>}
  */
-TDAPI.prototype.getTickets = function(appId, searchParams) {
+TDAPI.prototype.getTickets = function (appId, searchParams) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -508,7 +511,7 @@ TDAPI.prototype.getTickets = function(appId, searchParams) {
       });
     })
     .then(tickets => {
-      if(Array.isArray(tickets)) {
+      if (Array.isArray(tickets)) {
         return tickets.map(ticket => new Ticket(this, ticket));
       } else {
         return tickets;
@@ -525,7 +528,7 @@ TDAPI.prototype.getTickets = function(appId, searchParams) {
  * @param {Boolean} [false] notifyNewResponsible - If true, will notify the newly-responsible resource(s) if the responsibility is changed as a result of the edit.
  * @returns {Promise<Ticket>} ticket
  */
-TDAPI.prototype.patchTicket = function(appId, ticketId, patch, notifyNewResponsible) {
+TDAPI.prototype.patchTicket = function (appId, ticketId, patch, notifyNewResponsible) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -546,7 +549,7 @@ TDAPI.prototype.patchTicket = function(appId, ticketId, patch, notifyNewResponsi
  * @param {TicketFeedEntry} feedEntry  - The new feed entry to add.
  * @returns {Promise<ItemUpdate>} itemUpdate
  */
-TDAPI.prototype.updateTicket = function(appId, ticketId, feedEntry) {
+TDAPI.prototype.updateTicket = function (appId, ticketId, feedEntry) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -565,7 +568,7 @@ TDAPI.prototype.updateTicket = function(appId, ticketId, feedEntry) {
  * @param {Number} appId - The ID of the ticketing application.
  * @returns {Promise<TicketType[]>} types
  */
-TDAPI.prototype.getTicketTypes = function(appId) {
+TDAPI.prototype.getTicketTypes = function (appId) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -583,7 +586,7 @@ TDAPI.prototype.getTicketTypes = function(appId) {
  * @param {Number} appId  - The ID of the ticketing application.
  * @returns {Promise<TicketStatus[]>} statuses
  */
-TDAPI.prototype.getTicketStatuses = function(appId) {
+TDAPI.prototype.getTicketStatuses = function (appId) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -600,7 +603,7 @@ TDAPI.prototype.getTicketStatuses = function(appId) {
  * Gets a list of all active accounts/departments.
  * @returns {Promise<Account[]>} accounts
  */
-TDAPI.prototype.getAccounts = function() {
+TDAPI.prototype.getAccounts = function () {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -611,7 +614,7 @@ TDAPI.prototype.getAccounts = function() {
       });
     })
     .then(accounts => {
-      if(Array.isArray(accounts)) {
+      if (Array.isArray(accounts)) {
         return accounts.map(account => new Account(this, account));
       } else {
         return accounts;
@@ -625,7 +628,7 @@ TDAPI.prototype.getAccounts = function() {
  * @param {Number} id - The ID of the account.
  * @returns {Promise<Account>} account
  */
-TDAPI.prototype.getAccount = function(id) {
+TDAPI.prototype.getAccount = function (id) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -644,7 +647,7 @@ TDAPI.prototype.getAccount = function(id) {
  * @param {Account} account - The account to be created.
  * @returns {Promise<Account>} account
  */
-TDAPI.prototype.createAccount = function(account) {
+TDAPI.prototype.createAccount = function (account) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -664,7 +667,7 @@ TDAPI.prototype.createAccount = function(account) {
  * @param {Account} account - The fields that the updated account should hold.
  * @returns {Promise<Object>} body
  */
-TDAPI.prototype.editAccount = function(id, account) {
+TDAPI.prototype.editAccount = function (id, account) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -682,7 +685,7 @@ TDAPI.prototype.editAccount = function(id, account) {
  * @param {AccountSearch} searchParams
  * @returns {Promise<Account[]>} accounts
  */
-TDAPI.prototype.searchAccounts = function(searchParams) {
+TDAPI.prototype.searchAccounts = function (searchParams) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -694,7 +697,7 @@ TDAPI.prototype.searchAccounts = function(searchParams) {
       });
     })
     .then(accounts => {
-      if(Array.isArray(accounts)) {
+      if (Array.isArray(accounts)) {
         return accounts.map(account => new Account(this, account));
       } else {
         return accounts;
@@ -708,7 +711,7 @@ TDAPI.prototype.searchAccounts = function(searchParams) {
  * @param {Location} location - The location to create.
  * @returns {Promise<Location>} location
  */
-TDAPI.prototype.createLocation = function(location) {
+TDAPI.prototype.createLocation = function (location) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -728,7 +731,7 @@ TDAPI.prototype.createLocation = function(location) {
  * @param {Number} id - The ID of the location.
  * @returns {Promise<Location>} location
  */
-TDAPI.prototype.getLocation = function(id) {
+TDAPI.prototype.getLocation = function (id) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -748,7 +751,7 @@ TDAPI.prototype.getLocation = function(id) {
  * @param {Location} location - The location with updated values.
  * @returns {Promise<Location>} location
  */
-TDAPI.prototype.editLocation = function(id, location) {
+TDAPI.prototype.editLocation = function (id, location) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -769,7 +772,7 @@ TDAPI.prototype.editLocation = function(id, location) {
  * @param {LocationRoom} room - The room to create.
  * @returns {Promise<LocationRoom>} room
  */
-TDAPI.prototype.createRoom = function(id, room) {
+TDAPI.prototype.createRoom = function (id, room) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -789,7 +792,7 @@ TDAPI.prototype.createRoom = function(id, room) {
  * @param {Number} roomId - The room ID.
  * @returns {Promise<Object>} message
  */
-TDAPI.prototype.deleteRoom = function(id, roomId) {
+TDAPI.prototype.deleteRoom = function (id, roomId) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -809,7 +812,7 @@ TDAPI.prototype.deleteRoom = function(id, roomId) {
  * @param {LocationRoom} room   - The room with updated values.
  * @returns {Promise<LocationRoom>} room
  */
-TDAPI.prototype.editRoom = function(id, roomId, room) {
+TDAPI.prototype.editRoom = function (id, roomId, room) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -828,7 +831,7 @@ TDAPI.prototype.editRoom = function(id, roomId, room) {
  * @param {LocationSearch} searchParams - The search parameters to use.
  * @returns {Promise<Location[]>} locations
  */
-TDAPI.prototype.getLocations = function(searchParams) {
+TDAPI.prototype.getLocations = function (searchParams) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -847,7 +850,7 @@ TDAPI.prototype.getLocations = function(searchParams) {
  * @param {String} file - The path of the .xlsx file to upload.
  * @returns {Promise<Object>} message
  */
-TDAPI.prototype.importPeople = function(file) {
+TDAPI.prototype.importPeople = function (file) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -869,15 +872,15 @@ TDAPI.prototype.importPeople = function(file) {
  * @param {Number} appId            - The associated application ID to get attributes for.
  * @returns {Promise<CustomAttribute[]>}
  */
-TDAPI.prototype.getCustomAttributes = function(componentId, associatedTypeId, appId) {
+TDAPI.prototype.getCustomAttributes = function (componentId, associatedTypeId, appId) {
   return this.login()
     .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/attributes/custom` +
-              `?componentId=${componentId}` +
-              `&associatedTypeId=${associatedTypeId}` + 
-              `&appId=${appId}`,
+          `?componentId=${componentId}` +
+          `&associatedTypeId=${associatedTypeId}` +
+          `&appId=${appId}`,
         auth: { bearer: bearerToken },
         json: true
       });
@@ -889,7 +892,7 @@ TDAPI.prototype.getCustomAttributes = function(componentId, associatedTypeId, ap
  * Gets a list of all asset statuses.
  * @returns {Promise<AssetStatus[]>}
  */
-TDAPI.prototype.getAssetStatuses = function() {
+TDAPI.prototype.getAssetStatuses = function () {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -907,9 +910,9 @@ TDAPI.prototype.getAssetStatuses = function() {
  * @param {Asset} asset
  * @returns {Promise<Asset>}
  */
-TDAPI.prototype.createAsset = function(asset) {
+TDAPI.prototype.createAsset = function (asset) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'POST',
         url: `${this.baseUrl}/assets`,
@@ -928,9 +931,9 @@ TDAPI.prototype.createAsset = function(asset) {
  * @param {Number} resourceId - The resource ID.
  * @returns {Promise<Object>} message
  */
-TDAPI.prototype.removeAssetResource = function(assetId, resourceId) {
+TDAPI.prototype.removeAssetResource = function (assetId, resourceId) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'DELETE',
         url: `${this.baseUrl}/assets/${assetId}/users/${resourceId}`,
@@ -946,9 +949,9 @@ TDAPI.prototype.removeAssetResource = function(assetId, resourceId) {
  * @param {Number} id - The asset ID.
  * @returns {Promise<Asset>}
  */
-TDAPI.prototype.getAsset = function(id) {
+TDAPI.prototype.getAsset = function (id) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/assets/${id}`,
@@ -966,9 +969,9 @@ TDAPI.prototype.getAsset = function(id) {
  * @param {Asset}  asset - The asset with updated values.
  * @returns {Promise<Asset>}
  */
-TDAPI.prototype.editAsset = function(id, asset) {
+TDAPI.prototype.editAsset = function (id, asset) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'POST',
         url: `${this.baseUrl}/assets/${id}`,
@@ -986,9 +989,9 @@ TDAPI.prototype.editAsset = function(id, asset) {
  * @param {Number} id - The asset ID.
  * @returns {Promise<ItemUpdate[]>}
  */
-TDAPI.prototype.getAssetFeedEntries = function(id) {
+TDAPI.prototype.getAssetFeedEntries = function (id) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/assets/${id}/feed`,
@@ -1005,9 +1008,9 @@ TDAPI.prototype.getAssetFeedEntries = function(id) {
  * @param {FeedEntry} feedEntry - The item update containing the comment.
  * @returns {Promise<ItemUpdate>}
  */
-TDAPI.prototype.addAssetFeedEntry = function(id, feedEntry) {
+TDAPI.prototype.addAssetFeedEntry = function (id, feedEntry) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'POST',
         url: `${this.baseUrl}/assets/${id}/feed`,
@@ -1025,9 +1028,9 @@ TDAPI.prototype.addAssetFeedEntry = function(id, feedEntry) {
  * @param {Number} ticketId - The ticket ID. This must belong to an application that the user can access.
  * @returns {Promise<Object>} message
  */
-TDAPI.prototype.addAssetToTicket = function(id, ticketId) {
+TDAPI.prototype.addAssetToTicket = function (id, ticketId) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'POST',
         url: `${this.baseUrl}/assets/${id}/tickets/${ticketId}`,
@@ -1039,14 +1042,34 @@ TDAPI.prototype.addAssetToTicket = function(id, ticketId) {
 };
 
 /**
+ * Get assets associated with a ticket.
+ * The endpoint also returns additional configuration items.
+ * @param {Number} appId  - The associated application ID to get attributes for.
+ * @param {Number} ticketId - The ticket ID. This must belong to an application that the user can access.
+ * @returns {Promise<Object>} message
+ */
+TDAPI.prototype.getAssetsFromTicket = function (appId, ticketId) {
+  return this.login()
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/${appId}/tickets/${ticketId}/assets`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
+}
+
+/**
  * Removes a ticket from an asset.
  * @param {Number} id       - The asset ID.
  * @param {Number} ticketId - The ticket ID. This must belong to an application that the user can access.
  * @returns {Promise<Object>} message
  */
-TDAPI.prototype.removeAssetFromTicket = function(id, ticketId) {
+TDAPI.prototype.removeAssetFromTicket = function (id, ticketId) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: '',
         url: `${this.baseUrl}/assets/${id}/tickets/${ticketId}`,
@@ -1062,9 +1085,9 @@ TDAPI.prototype.removeAssetFromTicket = function(id, ticketId) {
  * @param {Number} id - The asset ID.
  * @returns {Promise<ResourceItem>}
  */
-TDAPI.prototype.getAssetResources = function(id) {
+TDAPI.prototype.getAssetResources = function (id) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/assets/${id}/users`,
@@ -1081,9 +1104,9 @@ TDAPI.prototype.getAssetResources = function(id) {
  * @param {Number} resourceId - The resource ID.
  * @returns {Promise<Object>} message
  */
-TDAPI.prototype.addAssetResource = function(id, resourceId) {
+TDAPI.prototype.addAssetResource = function (id, resourceId) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'POST',
         url: `${this.baseUrl}/assets/${id}/users/${resourceId}`,
@@ -1099,9 +1122,9 @@ TDAPI.prototype.addAssetResource = function(id, resourceId) {
  * @param {BulkImport<Asset[]>} importData - The collection of items that are being imported and the corresponding import settings.
  * @returns {Promise<ItemResult>}
  */
-TDAPI.prototype.importAssets = function(importData) {
+TDAPI.prototype.importAssets = function (importData) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'POST',
         url: `${this.baseUrl}/assets/import`,
@@ -1118,9 +1141,9 @@ TDAPI.prototype.importAssets = function(importData) {
  * @param {AssetSearch} [searchParams] - The search parameters to use.
  * @returns {Promise<Asset[]>}
  */
-TDAPI.prototype.getAssets = function(searchParams) {
+TDAPI.prototype.getAssets = function (searchParams) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'POST',
         url: `${this.baseUrl}/assets/search`,
@@ -1130,7 +1153,7 @@ TDAPI.prototype.getAssets = function(searchParams) {
       });
     })
     .then(assets => {
-      if(Array.isArray(assets)) {
+      if (Array.isArray(assets)) {
         return assets.map(asset => new Asset(this, asset));
       } else {
         return assets;
@@ -1144,7 +1167,7 @@ TDAPI.prototype.getAssets = function(searchParams) {
  * Gets a list of active vendors.
  * @returns {Promise<Vendor[]>}
  */
-TDAPI.prototype.getVendors = function() {
+TDAPI.prototype.getVendors = function () {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -1161,7 +1184,7 @@ TDAPI.prototype.getVendors = function() {
  * @param {VendorSearch} query - The searching parameters to use 
  * @returns {Promise<Vendor[]>}
  */
-TDAPI.prototype.searchVendors = function(query) {
+TDAPI.prototype.searchVendors = function (query) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -1180,7 +1203,7 @@ TDAPI.prototype.searchVendors = function(query) {
  * @param {Number} id - The vendor ID.
  * @returns {Promise<Vendor>}
  */
-TDAPI.prototype.getVendor = function(id) {
+TDAPI.prototype.getVendor = function (id) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -1198,7 +1221,7 @@ TDAPI.prototype.getVendor = function(id) {
  * @param {Vendor} vendor - The vendor to be created.
  * @returns {Promise<Vendor>}
  */
-TDAPI.prototype.createVendor = function(vendor) {
+TDAPI.prototype.createVendor = function (vendor) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -1216,17 +1239,17 @@ TDAPI.prototype.createVendor = function(vendor) {
  * Gets a list of active product models.
  * @returns {Promise<ProductModel[]>}
  */
-TDAPI.prototype.getProductModels = function() {
+TDAPI.prototype.getProductModels = function () {
   return this.login()
-  .then(bearerToken => {
-    return request({
-      method: 'GET',
-      url: `${this.baseUrl}/assets/models`,
-      auth: { bearer: bearerToken },
-      json: true
-    });
-  })
-  .catch(handleError);
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/assets/models`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
 };
 
 /**
@@ -1234,17 +1257,17 @@ TDAPI.prototype.getProductModels = function() {
  * @param {Number} id
  * @returns {Promise<ProductModel>}
  */
-TDAPI.prototype.getProductModel = function(id) {
+TDAPI.prototype.getProductModel = function (id) {
   return this.login()
-  .then(bearerToken => {
-    return request({
-      method: 'GET',
-      url: `${this.baseUrl}/assets/models/${id}`,
-      auth: { bearer: bearerToken },
-      json: true
-    });
-  })
-  .catch(handleError);
+    .then(bearerToken => {
+      return request({
+        method: 'GET',
+        url: `${this.baseUrl}/assets/models/${id}`,
+        auth: { bearer: bearerToken },
+        json: true
+      });
+    })
+    .catch(handleError);
 };
 
 /**
@@ -1252,18 +1275,18 @@ TDAPI.prototype.getProductModel = function(id) {
  * @param {ProductModel} productModel
  * @returns {ProductModel} - The new Product Model.
  */
-TDAPI.prototype.createProductModel = function(productModel) {
+TDAPI.prototype.createProductModel = function (productModel) {
   return this.login()
-  .then(bearerToken => {
-    return request({
-      method: 'POST',
-      url: `${this.baseUrl}/assets/models`,
-      auth: { bearer: bearerToken },
-      json: true,
-      body: productModel || {}
-    });
-  })
-  .catch(handleError);
+    .then(bearerToken => {
+      return request({
+        method: 'POST',
+        url: `${this.baseUrl}/assets/models`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: productModel || {}
+      });
+    })
+    .catch(handleError);
 };
 
 /**
@@ -1271,18 +1294,18 @@ TDAPI.prototype.createProductModel = function(productModel) {
  * @param {id} id - The product model id
  * @returns {ProductModel} - The updated Product Model.
  */
-TDAPI.prototype.editProductModel = function(id) {
+TDAPI.prototype.editProductModel = function (id) {
   return this.login()
-  .then(bearerToken => {
-    return request({
-      method: 'PUT',
-      url: `${this.baseUrl}/assets/models/${id}`,
-      auth: { bearer: bearerToken },
-      json: true,
-      body: productModel || {}
-    });
-  })
-  .catch(handleError);
+    .then(bearerToken => {
+      return request({
+        method: 'PUT',
+        url: `${this.baseUrl}/assets/models/${id}`,
+        auth: { bearer: bearerToken },
+        json: true,
+        body: productModel || {}
+      });
+    })
+    .catch(handleError);
 };
 
 /**
@@ -1290,7 +1313,7 @@ TDAPI.prototype.editProductModel = function(id) {
  * @param {Number} id - The ID of the custom attribute. 
  * @returns {Promise<CustomAttributeChoice[]>}
  */
-TDAPI.prototype.getCustomAttributeChoices = function(id) {
+TDAPI.prototype.getCustomAttributeChoices = function (id) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -1309,7 +1332,7 @@ TDAPI.prototype.getCustomAttributeChoices = function(id) {
  * @param {CustomAttributeChoice} customAttributeChoice - The choice to add to the custom attribute.
  * @returns {Promise<CustomAttributeChoice>}
  */
-TDAPI.prototype.addCustomAttributeChoice = function(id, customAttributeChoice) {
+TDAPI.prototype.addCustomAttributeChoice = function (id, customAttributeChoice) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -1329,7 +1352,7 @@ TDAPI.prototype.addCustomAttributeChoice = function(id, customAttributeChoice) {
  * @param {any} choiceId - The choice ID.
  * @returns {Promise<Object>} message
  */
-TDAPI.prototype.removeCustomAttributeChoice = function(id, choiceId) {
+TDAPI.prototype.removeCustomAttributeChoice = function (id, choiceId) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -1349,7 +1372,7 @@ TDAPI.prototype.removeCustomAttributeChoice = function(id, choiceId) {
  * @param {CustomAttributeChoice} customAttributeChoice - The choice with updated values. 
  * @returns {Promise<CustomAttributeChoice>}
  */
-TDAPI.editCustomAttributeChoice = function(id, choiceId, customAttributeChoice) {
+TDAPI.editCustomAttributeChoice = function (id, choiceId, customAttributeChoice) {
   return this.login()
     .then(bearerToken => {
       return request({
@@ -1370,15 +1393,15 @@ TDAPI.editCustomAttributeChoice = function(id, choiceId, customAttributeChoice) 
  * @param {Number} [appId]            - The associated application ID to get attributes for.
  * @returns {Promise<CustomAttribute[]>}
  */
-TDAPI.getCustomAttributes = function(componentId, associatedTypeId, appId) {
+TDAPI.getCustomAttributes = function (componentId, associatedTypeId, appId) {
   return this.login()
     .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/attributes/custom?` +
-                `componentId=${componentId}` +
-                `&associatedTypeId=${associatedTypeId || 0}` +
-                `&appId=${appId || 0}`,
+          `componentId=${componentId}` +
+          `&associatedTypeId=${associatedTypeId || 0}` +
+          `&appId=${appId || 0}`,
         auth: { bearer: bearerToken },
         json: true
       });
@@ -1390,9 +1413,9 @@ TDAPI.getCustomAttributes = function(componentId, associatedTypeId, appId) {
  * Gets a list of all Report Builder reports visible to the user.
  * @returns {Promise<ReportInfo[]>}
  */
-TDAPI.prototype.getReports = function() {
+TDAPI.prototype.getReports = function () {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/reports`,
@@ -1410,14 +1433,14 @@ TDAPI.prototype.getReports = function() {
  * @param {String}  [dataSortExpression] - The sorting expression to use for the report's data. Only applicable when data is being retrieved. When not provided, will fall back to the default used for the report.
  * @returns {Promise<Report>}
  */
-TDAPI.prototype.getReport = function(id, withData, dataSortExpression) {
+TDAPI.prototype.getReport = function (id, withData, dataSortExpression) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/reports/${id}?` +
-                `withData=${withData || false}` +
-                `&dataSortExpression=${dataSortExpression || ''}`,
+          `withData=${withData || false}` +
+          `&dataSortExpression=${dataSortExpression || ''}`,
         auth: { bearer: bearerToken },
         json: true
       });
@@ -1430,9 +1453,9 @@ TDAPI.prototype.getReport = function(id, withData, dataSortExpression) {
  * @param {Object} reportSearch - The searching parameters to use.
  * @returns {Promise<ReportInfo>}
  */
-TDAPI.prototype.searchReports = function(reportSearch) {
+TDAPI.prototype.searchReports = function (reportSearch) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'POST',
         url: `${this.baseUrl}/reports/search`,
@@ -1449,9 +1472,9 @@ TDAPI.prototype.searchReports = function(reportSearch) {
  * @param {Guid} id - The attachment ID.
  * @returns {Attachment} - The attachment object, if found.
  */
-TDAPI.prototype.getAttachment = function(id) {
+TDAPI.prototype.getAttachment = function (id) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/attachments/${id}`,
@@ -1467,9 +1490,9 @@ TDAPI.prototype.getAttachment = function(id) {
  * @param {Guid} id - The attachment ID.
  * @returns {Promise<Object>} - The attachment's file contents, if found.
  */
-TDAPI.prototype.getAttachmentContents = function(id) {
+TDAPI.prototype.getAttachmentContents = function (id) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'GET',
         url: `${this.baseUrl}/attachments/${id}/content`,
@@ -1485,9 +1508,9 @@ TDAPI.prototype.getAttachmentContents = function(id) {
  * @param {Guid} id - The attachment ID.
  * @returns {Promise<Object>} - A response message indicating if the operation was successful or not.
  */
-TDAPI.prototype.deleteAttachment = function(id) {
+TDAPI.prototype.deleteAttachment = function (id) {
   return this.login()
-     .then(bearerToken => {
+    .then(bearerToken => {
       return request({
         method: 'DELETE',
         url: `${this.baseUrl}/attachments/${id}`,
@@ -1540,11 +1563,11 @@ function handleError(err) {
 // Check if JWT expired
 function tokenExpired(bearerToken) {
   var decodedToken = jwtDecode(bearerToken);
-  if(decodedToken.exp) {
+  if (decodedToken.exp) {
     var exp = new Date(decodedToken.exp * 1000); // Convert seconds to ms for Date constructor
     var now = new Date();
-    
-    if(exp > now) {
+
+    if (exp > now) {
       return false;
     }
   }
