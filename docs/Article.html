@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Location - Documentation</title>
+    <title>Article - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -31,7 +31,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Location</h1>
+    <h1 class="page-title">Article</h1>
     
 
     
@@ -44,7 +44,7 @@
 <header>
     
         <h2>
-        Location
+        Article
         </h2>
         
     
@@ -57,14 +57,14 @@
 
     
 
-    <h4 class="name" id="Location"><span class="type-signature"></span>new Location<span class="signature">(client, properties)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Article"><span class="type-signature"></span>new Article<span class="signature">(client, properties)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Location class
+    Article class
 </div>
 
 
@@ -116,7 +116,7 @@
 
             
 
-            <td class="description last">The TDAPI client the location belongs to.</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -139,7 +139,7 @@
 
             
 
-            <td class="description last">The properties to be initialized on the Location object (see: Properties).</td>
+            <td class="description last"></td>
         </tr>
 
     
@@ -193,14 +193,37 @@
 
             
 
-            <td class="description last">The location ID.</td>
+            <td class="description last">The ID of the article.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>Name</code></td>
+                <td class="name"><code>CategoryID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the article's category - editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CategoryName</code></td>
             
 
             <td class="type">
@@ -216,14 +239,14 @@
 
             
 
-            <td class="description last">The location name.</td>
+            <td class="description last">The name of article's category.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>Description</code></td>
+                <td class="name"><code>Subject</code></td>
             
 
             <td class="type">
@@ -239,14 +262,14 @@
 
             
 
-            <td class="description last">The description.</td>
+            <td class="description last">The subject of the article - required, editable.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>ExternalID</code></td>
+                <td class="name"><code>Body</code></td>
             
 
             <td class="type">
@@ -262,14 +285,129 @@
 
             
 
-            <td class="description last">The external identifier for the location.</td>
+            <td class="description last">The body of the article - required, editable.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>IsActive</code></td>
+                <td class="name"><code>Summary</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The summary of the article - editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Status</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The status of the article (see https://api.teamdynamix.com/TDWebApi/Home/type/TeamDynamix.Api.KnowledgeBase.ArticleStatus) - required, editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Attributes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Number">Number</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The custom attributes of the article - editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ReviewDateUtc</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">DateTime</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Review date of the article - editable, nullable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Order</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Double</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The order of the article. Articles are ordered first by this value and then by the subject - required, editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isPublished</code></td>
             
 
             <td class="type">
@@ -285,129 +423,14 @@
 
             
 
-            <td class="description last">The active status.</td>
+            <td class="description last">Indicates whether the article is published, editable.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>Address</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#String">String</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The address.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>City</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#String">String</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The city.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>State</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#String">String</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The state/province.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>PostalCode</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#String">String</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The postal code.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>Country</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#String">String</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The country.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>IsRoomRequired</code></td>
+                <td class="name"><code>isPublic</code></td>
             
 
             <td class="type">
@@ -423,14 +446,83 @@
 
             
 
-            <td class="description last">A value indicating whether the location requires a room when specified for an asset.</td>
+            <td class="description last">Indicates whether the article is public, editable.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>AssetsAcount</code></td>
+                <td class="name"><code>WhitelistGroups</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Indicates whether groups assigned to the article are whitelisted or blacklisted from accessing the article in the Knowledge Base, editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>InheritPermissions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Indicates whether permissions are inherited from the parent category, editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NotifyOwner</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Boolean">Boolean</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Indicates whether the owner should be notified of any feedback, editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RevisionID</code></td>
             
 
             <td class="type">
@@ -446,14 +538,14 @@
 
             
 
-            <td class="description last">The number of assets associated with this location.</td>
+            <td class="description last">The ID of the article's current revision.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>TicketsCount</code></td>
+                <td class="name"><code>RevisionNumber</code></td>
             
 
             <td class="type">
@@ -469,53 +561,7 @@
 
             
 
-            <td class="description last">The number of tickets associated with this location.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>RoomsCount</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#Number">Number</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The number of rooms associated with this location.</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>Rooms</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#LocationRoom">LocationRoom</a>></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The rooms associated with this location.</td>
+            <td class="description last">The number of the article's current revision.</td>
         </tr>
 
     
@@ -528,7 +574,7 @@
             <td class="type">
             
                 
-<span class="param-type">Date</span>
+<span class="param-type">DateTime</span>
 
 
             
@@ -538,7 +584,7 @@
 
             
 
-            <td class="description last">The created date.</td>
+            <td class="description last">The created date of the article.</td>
         </tr>
 
     
@@ -561,7 +607,7 @@
 
             
 
-            <td class="description last">The UID of the creator.</td>
+            <td class="description last">The UID of the article's creator.</td>
         </tr>
 
     
@@ -584,7 +630,7 @@
 
             
 
-            <td class="description last">The full name of the creator.</td>
+            <td class="description last">The full name of the article's creator.</td>
         </tr>
 
     
@@ -597,7 +643,7 @@
             <td class="type">
             
                 
-<span class="param-type">Date</span>
+<span class="param-type">DateTime</span>
 
 
             
@@ -607,7 +653,7 @@
 
             
 
-            <td class="description last">The last modified date.</td>
+            <td class="description last">The date the article was last modified.</td>
         </tr>
 
     
@@ -630,7 +676,7 @@
 
             
 
-            <td class="description last">The UID of the last person to modify the location.</td>
+            <td class="description last">The UID of the last user to modify the article.</td>
         </tr>
 
     
@@ -653,23 +699,20 @@
 
             
 
-            <td class="description last">The full name of the last person to modify the location.</td>
+            <td class="description last">The name of the last user to modify the article.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>Latitude</code></td>
+                <td class="name"><code>OwnerUid</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#Number">Number</a></span>
-|
-
-<span class="param-type"><a href="global.html#null">null</a></span>
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
 
 
             
@@ -679,23 +722,20 @@
 
             
 
-            <td class="description last">The latitude of the location.</td>
+            <td class="description last">The UID of the article's owner, editable.</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>Longitude</code></td>
+                <td class="name"><code>OwnerFullName</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="global.html#Number">Number</a></span>
-|
-
-<span class="param-type"><a href="global.html#null">null</a></span>
+<span class="param-type"><a href="global.html#String">String</a></span>
 
 
             
@@ -705,7 +745,122 @@
 
             
 
-            <td class="description last">The longitude of the location.</td>
+            <td class="description last">The full name of the article's owner, editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>OwningGroupID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Guid">Guid</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The ID of the group that owns the article, editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>OwningGroupName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The name of the group that owns the article, editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Tags</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a>.&lt;<a href="global.html#String">String</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The tags associated with the article. Tags are not returned from the search endpoint, editable.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Attachments</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#Array">Array</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The article's attachments (see https://api.teamdynamix.com/TDWebApi/Home/type/TeamDynamix.Api.Attachments.Attachment).</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Uri</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#String">String</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The URI to retrieve the article.</td>
         </tr>
 
     
@@ -744,7 +899,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="structures_location.js.html">structures/location.js</a>, <a href="structures_location.js.html#line33">line 33</a>
+        <a href="structures_article.js.html">structures/article.js</a>, <a href="structures_article.js.html#line40">line 40</a>
     </li></ul></dd>
     
 
@@ -793,14 +948,15 @@
 
     
 
-    <h4 class="name" id="createRoom"><span class="type-signature"></span>createRoom<span class="signature">(room)</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="global.html#LocationRoom">LocationRoom</a>>}</span></h4>
+    <h4 class="name" id="getRelated"><span class="type-signature"></span>getRelated<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="global.html#Array">Array</a>.&lt;<a href="Article.html">Article</a>>>}</span></h4>
 
     
 
 
 
 <div class="description">
-    Creates a room in the location.
+    Gets related articles in TDx.
+API endpoint returns related articles with the body omitted.
 </div>
 
 
@@ -809,55 +965,6 @@
 
 
 
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>room</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#LocationRoom">LocationRoom</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The room to add to the location.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
 
 
 
@@ -893,7 +1000,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="structures_location.js.html">structures/location.js</a>, <a href="structures_location.js.html#line69">line 69</a>
+        <a href="structures_article.js.html">structures/article.js</a>, <a href="structures_article.js.html#line77">line 77</a>
     </li></ul></dd>
     
 
@@ -919,10 +1026,6 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    room
-</div>
-
 
 
 <dl class="param-type">
@@ -931,7 +1034,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise.&lt;<a href="global.html#LocationRoom">LocationRoom</a>></span>
+<span class="param-type">Promise.&lt;<a href="global.html#Array">Array</a>.&lt;<a href="Article.html">Article</a>>></span>
 
 
     </dd>
@@ -946,167 +1049,14 @@
 
     
 
-    <h4 class="name" id="deleteRoom"><span class="type-signature"></span>deleteRoom<span class="signature">(roomId)</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="global.html#Object">Object</a>>}</span></h4>
+    <h4 class="name" id="update"><span class="type-signature"></span>update<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="Article.html">Article</a>>}</span></h4>
 
     
 
 
 
 <div class="description">
-    Deletes a room in the location.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>roomId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#Number">Number</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The ID of the room to delete.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="structures_location.js.html">structures/location.js</a>, <a href="structures_location.js.html#line88">line 88</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    message
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;<a href="global.html#Object">Object</a>></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="edit"><span class="type-signature"></span>edit<span class="signature">()</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="Location.html">Location</a>>}</span></h4>
-
-    
-
-
-
-<div class="description">
-    Edits the location.
+    Edits the article in TDx.
 </div>
 
 
@@ -1150,7 +1100,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="structures_location.js.html">structures/location.js</a>, <a href="structures_location.js.html#line50">line 50</a>
+        <a href="structures_article.js.html">structures/article.js</a>, <a href="structures_article.js.html#line57">line 57</a>
     </li></ul></dd>
     
 
@@ -1176,10 +1126,6 @@
 <h5>Returns:</h5>
 
         
-<div class="param-desc">
-    location
-</div>
-
 
 
 <dl class="param-type">
@@ -1188,160 +1134,7 @@
     </dt>
     <dd>
         
-<span class="param-type">Promise.&lt;<a href="Location.html">Location</a>></span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="editRoom"><span class="type-signature"></span>editRoom<span class="signature">(roomId)</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="global.html#LocationRoom">LocationRoom</a>>}</span></h4>
-
-    
-
-
-
-<div class="description">
-    Edits the specified room in the location.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>roomId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="global.html#Number">Number</a></span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The ID of the room to edit.</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="structures_location.js.html">structures/location.js</a>, <a href="structures_location.js.html#line106">line 106</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    room
-</div>
-
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise.&lt;<a href="global.html#LocationRoom">LocationRoom</a>></span>
+<span class="param-type">Promise.&lt;<a href="Article.html">Article</a>></span>
 
 
     </dd>
