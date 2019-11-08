@@ -9,6 +9,7 @@ var Ticket = require('./structures/ticket');
 var Account = require('./structures/account');
 var Location = require('./structures/location');
 var Asset = require('./structures/asset');
+var Article = require('./structures/article');
 
 
 /**
@@ -1519,6 +1520,46 @@ TDAPI.prototype.deleteAttachment = function (id) {
       });
     })
     .catch(handleError);
+};
+
+/**
+ * Gets an article from Knowledge Base.
+ * @param {Number} articleID - The article ID.
+ * @returns {Promise<Article>}
+ */
+TDAPI.prototype.getArticle = async function (articleID) {
+  try {
+    let bearerToken = await this.login();
+    let data = await request({
+      method: 'GET',
+      url: `${this.baseUrl}/knowledgebase/${articleID}`,
+      auth: { bearer: bearerToken },
+      json: true,
+    });
+
+    return new Article(this, data);
+  } catch (err) {
+    handleError(err);
+  }
+};
+
+/** Searches for articles from Knowledge Base.
+ * @param {AssetSearch} searchParams - the search parameters for an article
+ * @returns {Promise<Array<Article>>}
+ */
+TDAPI.prototype.getArticles = async function (searchParams) {
+  try {
+    let bearerToken = await this.login();
+    return request({
+      method: 'POST',
+      url: `${this.baseUrl}/knowledgebase/search`,
+      auth: { bearer: bearerToken },
+      json: true,
+      body: searchParams || {}
+    });
+  } catch (err) {
+    handleError(err);
+  }
 };
 
 // TDAPI.prototype.addAttachment = function(appId, ticketId, attachment) {
