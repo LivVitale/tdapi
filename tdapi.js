@@ -1291,16 +1291,16 @@ TDAPI.prototype.createProductModel = function (productModel) {
 };
 
 /**
- * edits a product model.
- * @param {id} id - The product model id
- * @returns {ProductModel} - The updated Product Model.
+ * Edits a product model.
+ * @param {ProductModel} productModel - The locally edited product model
+ * @returns {Promise<ProductModel>} - The updated Product Model in TDx
  */
-TDAPI.prototype.editProductModel = function (id) {
+TDAPI.prototype.editProductModel = function (productModel) {
   return this.login()
     .then(bearerToken => {
       return request({
         method: 'PUT',
-        url: `${this.baseUrl}/assets/models/${id}`,
+        url: `${this.baseUrl}/assets/models/${productModel.ID}`,
         auth: { bearer: bearerToken },
         json: true,
         body: productModel || {}
