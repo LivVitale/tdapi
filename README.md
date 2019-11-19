@@ -1,22 +1,30 @@
 # TDAPI - NodeJS TeamDynamix API Wrapper
-Work in-progress API wrapper for TeamDynamix.
+API wrapper for TeamDynamix.
+
+To read about new features and fixes from a specific version, see the [change log](CHANGELOG.md).
 
 ## Quick-start
-    var TDAPI = require('tdapi');
-    var TD = new TDAPI({
-        baseUrl: 'https://api.teamdynamix.com/TDWebApi/api',
-        credentials: {
-            BEID:           'xxxxxx',
-            WebServicesKey: 'xxxxxx'
-        }
-    });
+```javascript
+const TDAPI = require('tdapi');
 
-    TD.getUsers({ SearchText: 'vitale'})
-        .then(users => {
-            console.log(users);
-        }, err => {
-            console.error(err);
-        });
+// Authenticate
+const TD = new TDAPI({
+  baseUrl: 'https://api.teamdynamix.com/TDWebApi/api',
+  credentials: {
+    UserName: 'xxxxxx',
+    Password: 'xxxxxx'
+  }
+});
+
+// Example: search for users by name
+TD.getUsers({ SearchText: 'vitale'})
+  .then(users => {
+    console.log(users);
+  })
+  .catch(err => {
+    console.error(err);
+  });
+```
 
 ## Documentation
 [TDAPI documentation](https://livvitale.github.io/tdapi/)
