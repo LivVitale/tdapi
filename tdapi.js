@@ -1544,7 +1544,7 @@ TDAPI.prototype.getArticle = async function (articleID) {
 };
 
 /** Searches for articles from Knowledge Base.
- * @param {AssetSearch} searchParams - the search parameters for an article
+ * @param {ArticleSearch} searchParams - the search parameters for an article
  * @returns {Promise<Array<Article>>}
  */
 TDAPI.prototype.getArticles = async function (searchParams) {
