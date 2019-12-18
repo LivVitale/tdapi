@@ -1543,7 +1543,8 @@ TDAPI.prototype.getArticle = async function (articleID) {
   }
 };
 
-/** Searches for articles from Knowledge Base.
+/** 
+ * Searches for articles from Knowledge Base.
  * @param {ArticleSearch} searchParams - the search parameters for an article
  * @returns {Promise<Array<Article>>}
  */
@@ -1561,6 +1562,52 @@ TDAPI.prototype.getArticles = async function (searchParams) {
     handleError(err);
   }
 };
+
+/**
+ * Get a ticket's task
+ * @param appId - the ID of the ticket application
+ * @param ticketID - ID of the ticket
+ * @param taskID - ID of the task
+ * 
+ * @returns {Promise<Object>}
+ */
+TDAPI.prototype.getTicketTask = async function (appId, ticketID, taskID) {
+  try {
+    let bearerToken = await this.login();
+    return request({
+      method: 'GET',
+      url: `${this.baseUrl}/${appId}/tickets/${ticketID}/tasks/${taskID}`,
+      auth: { bearer: bearerToken },
+      json: true,
+    });
+  } catch (err) {
+    handleError(err);
+  }
+}
+
+/**
+ * Edit a ticket's task
+ * @param appId - the ID of the ticket application
+ * @param ticketID - ID of the ticket
+ * @param taskID - ID of the task
+ * @param taskData - data of the edited task
+ *
+ * @returns {Promise<Object>}
+ */
+TDAPI.prototype.editTicketTask = async function (appId, ticketID, taskID, taskData) {
+  try {
+    let bearerToken = await this.login();
+    return request({
+      method: 'PUT',
+      url: `${this.baseUrl}/${appId}/tickets/${ticketID}/tasks/${taskID}`,
+      auth: { bearer: bearerToken },
+      body: taskData,
+      json: true,
+    });
+  } catch (err) {
+    handleError(err);
+  }
+}
 
 // Generic error handling - TODO: Improve error detail
 function handleError(err) {

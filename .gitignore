@@ -1,4 +1,4 @@
-node_modules
-config.js
-test.js
-.vscode
+node_modules/
+test*
+output*
+.vscode/
