@@ -1562,40 +1562,6 @@ TDAPI.prototype.getArticles = async function (searchParams) {
   }
 };
 
-// TDAPI.prototype.addAttachment = function(appId, ticketId, attachment) {
-//   return new Promise((resolve, reject) => {
-//     this.login()
-//       .then(bearerToken => {
-//         var opts = {
-//           url: `${this.baseUrl}/${appId}/tickets/${ticketId}/attachments`,
-//           auth: { bearer: bearerToken },
-//           formData: {
-//             file: {
-//               options: {
-//                 filename: 'test.json',
-//                 contentType: 'application/json'
-//               },
-//               value: JSON.stringify({
-//                 'item': '2390712939120',
-//                 'text': 'dasiodnasiodnsdoanodiasd'
-//               })
-//             }
-//           }
-//         };
-
-//         request.post(opts, function(err, response, body) {
-//           if(err) {
-//             reject(err);
-//           } else {
-//             resolve(body);
-//           }
-//         });
-//       }, err => {
-//         reject(err);
-//       });
-//   });
-// };
-
 // Generic error handling - TODO: Improve error detail
 function handleError(err) {
   return Promise.reject(err);
