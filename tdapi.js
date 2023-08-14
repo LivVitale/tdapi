@@ -1358,7 +1358,7 @@ TDAPI.prototype.removeCustomAttributeChoice = function (id, choiceId) {
     .then(bearerToken => {
       return request({
         method: 'DELETE',
-        url: `${this.baseUrl}/attributes/${id}/${choiceId}`,
+        url: `${this.baseUrl}/attributes/${id}/choices/${choiceId}`,
         auth: { bearer: bearerToken },
         json: true
       });
